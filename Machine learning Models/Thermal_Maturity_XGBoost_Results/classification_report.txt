@@ -1,0 +1,18 @@
+XGBOOST THERMAL MATURITY CLASSIFICATION REPORT
+================================================================================
+
+Classes: immature, mature, semi_mature
+Training Accuracy: 98.29%
+Test Accuracy: 75.54%
+Overfitting Gap: 22.74%
+Best Iteration: 49
+
+              precision    recall  f1-score   support
+
+    immature     0.8134    0.7198    0.7637       521
+      mature     0.7056    0.8274    0.7616       504
+ semi_mature     0.7627    0.7114    0.7362       402
+
+    accuracy                         0.7554      1427
+   macro avg     0.7606    0.7529    0.7539      1427
+weighted avg     0.7610    0.7554    0.7552      1427

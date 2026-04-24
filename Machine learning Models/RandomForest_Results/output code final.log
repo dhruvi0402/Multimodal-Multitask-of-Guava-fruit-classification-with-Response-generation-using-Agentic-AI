@@ -1,0 +1,194 @@
+[Running] python -u "c:\Users\SATYABRATA MISHRA\Downloads\Final preprocessed data\tempCodeRunnerFile.python"
+Traceback (most recent call last):
+  File "c:\Users\SATYABRATA MISHRA\Downloads\Final preprocessed data\tempCodeRunnerFile.python", line 11, in <module>
+    from skimage.feature import hog
+ModuleNotFoundError: No module named 'skimage'
+
+[Done] exited with code=1 in 23.436 seconds
+
+[Running] python -u "c:\Users\SATYABRATA MISHRA\Downloads\Final preprocessed data\tempCodeRunnerFile.python"
+Traceback (most recent call last):
+  File "c:\Users\SATYABRATA MISHRA\Downloads\Final preprocessed data\tempCodeRunnerFile.python", line 11, in <module>
+    from skimage.feature import hog
+ModuleNotFoundError: No module named 'skimage'
+
+[Done] exited with code=1 in 3.204 seconds
+
+[Running] python -u "c:\Users\SATYABRATA MISHRA\Downloads\Final preprocessed data\tempCodeRunnerFile.python"
+============================================================
+SVM IMAGE CLASSIFICATION - GUAVA DISEASE DETECTION
+============================================================
+
+Loading Training data...
+  anthracose: 1779 images
+  fruit_fly: 2081 images
+  healthy_guava: 1651 images
+
+Loading Validation data...
+  anthracose: 381 images
+  fruit_fly: 446 images
+  healthy_guava: 354 images
+
+Loading Test data...
+  anthracose: 382 images
+  fruit_fly: 446 images
+  healthy_guava: 354 images
+
+Dataset Summary:
+  Training samples: 6692
+  Test samples: 1182
+  Classes: ['anthracose', 'fruit_fly', 'healthy_guava']
+  Feature dimension: 8196
+
+Scaling features...
+
+Performing Grid Search for best hyperparameters...
+Fitting 3 folds for each of 32 candidates, totalling 96 fits
+joblib.externals.loky.process_executor._RemoteTraceback: 
+"""
+Traceback (most recent call last):
+  File "C:\Users\SATYABRATA MISHRA\AppData\Local\Programs\Python\Python312\Lib\site-packages\joblib\externals\loky\process_executor.py", line 463, in _process_worker
+    r = call_item()
+        ^^^^^^^^^^^
+  File "C:\Users\SATYABRATA MISHRA\AppData\Local\Programs\Python\Python312\Lib\site-packages\joblib\externals\loky\process_executor.py", line 291, in __call__
+    return self.fn(*self.args, **self.kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\SATYABRATA MISHRA\AppData\Local\Programs\Python\Python312\Lib\site-packages\joblib\parallel.py", line 598, in __call__
+    return [func(*args, **kwargs)
+            ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\SATYABRATA MISHRA\AppData\Local\Programs\Python\Python312\Lib\site-packages\sklearn\utils\parallel.py", line 136, in __call__
+    return self.function(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\SATYABRATA MISHRA\AppData\Local\Programs\Python\Python312\Lib\site-packages\sklearn\model_selection\_validation.py", line 881, in _fit_and_score
+    X_test, y_test = _safe_split(estimator, X, y, test, train)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\SATYABRATA MISHRA\AppData\Local\Programs\Python\Python312\Lib\site-packages\sklearn\utils\metaestimators.py", line 156, in _safe_split
+    X_subset = _safe_indexing(X, indices)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\SATYABRATA MISHRA\AppData\Local\Programs\Python\Python312\Lib\site-packages\sklearn\utils\_indexing.py", line 267, in _safe_indexing
+    return _array_indexing(X, indices, indices_dtype, axis=axis)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\SATYABRATA MISHRA\AppData\Local\Programs\Python\Python312\Lib\site-packages\sklearn\utils\_indexing.py", line 33, in _array_indexing
+    return array[key, ...] if axis == 0 else array[:, key]
+           ~~~~~^^^^^^^^^^
+  File "C:\Users\SATYABRATA MISHRA\AppData\Local\Programs\Python\Python312\Lib\site-packages\numpy\core\memmap.py", line 335, in __getitem__
+    res = super().__getitem__(index)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^
+numpy.core._exceptions._ArrayMemoryError: Unable to allocate 139. MiB for an array with shape (2230, 8196) and data type float64
+"""
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "c:\Users\SATYABRATA MISHRA\Downloads\Final preprocessed data\tempCodeRunnerFile.python", line 135, in <module>
+    grid_search.fit(X_train_scaled, y_train_full)
+  File "C:\Users\SATYABRATA MISHRA\AppData\Local\Programs\Python\Python312\Lib\site-packages\sklearn\base.py", line 1473, in wrapper
+    return fit_method(estimator, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\SATYABRATA MISHRA\AppData\Local\Programs\Python\Python312\Lib\site-packages\sklearn\model_selection\_search.py", line 1019, in fit
+    self._run_search(evaluate_candidates)
+  File "C:\Users\SATYABRATA MISHRA\AppData\Local\Programs\Python\Python312\Lib\site-packages\sklearn\model_selection\_search.py", line 1573, in _run_search
+    evaluate_candidates(ParameterGrid(self.param_grid))
+  File "C:\Users\SATYABRATA MISHRA\AppData\Local\Programs\Python\Python312\Lib\site-packages\sklearn\model_selection\_search.py", line 965, in evaluate_candidates
+    out = parallel(
+          ^^^^^^^^^
+  File "C:\Users\SATYABRATA MISHRA\AppData\Local\Programs\Python\Python312\Lib\site-packages\sklearn\utils\parallel.py", line 74, in __call__
+    return super().__call__(iterable_with_config)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\SATYABRATA MISHRA\AppData\Local\Programs\Python\Python312\Lib\site-packages\joblib\parallel.py", line 2007, in __call__
+    return output if self.return_generator else list(output)
+                                                ^^^^^^^^^^^^
+  File "C:\Users\SATYABRATA MISHRA\AppData\Local\Programs\Python\Python312\Lib\site-packages\joblib\parallel.py", line 1650, in _get_outputs
+    yield from self._retrieve()
+  File "C:\Users\SATYABRATA MISHRA\AppData\Local\Programs\Python\Python312\Lib\site-packages\joblib\parallel.py", line 1754, in _retrieve
+    self._raise_error_fast()
+  File "C:\Users\SATYABRATA MISHRA\AppData\Local\Programs\Python\Python312\Lib\site-packages\joblib\parallel.py", line 1789, in _raise_error_fast
+    error_job.get_result(self.timeout)
+  File "C:\Users\SATYABRATA MISHRA\AppData\Local\Programs\Python\Python312\Lib\site-packages\joblib\parallel.py", line 745, in get_result
+    return self._return_or_raise()
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\SATYABRATA MISHRA\AppData\Local\Programs\Python\Python312\Lib\site-packages\joblib\parallel.py", line 763, in _return_or_raise
+    raise self._result
+numpy.core._exceptions._ArrayMemoryError: Unable to allocate 139. MiB for an array with shape (2230, 8196) and data type float64
+
+[Done] exited with code=1 in 106.257 seconds
+
+[Running] python -u "c:\Users\SATYABRATA MISHRA\Downloads\Final preprocessed data\tempCodeRunnerFile.python"
+============================================================
+RANDOM FOREST IMAGE CLASSIFICATION - GUAVA DISEASE DETECTION
+============================================================
+
+Loading Training data...
+  anthracose: 1779 images
+  fruit_fly: 2081 images
+  healthy_guava: 1651 images
+
+Loading Validation data...
+  anthracose: 381 images
+  fruit_fly: 446 images
+  healthy_guava: 354 images
+
+Loading Test data...
+  anthracose: 382 images
+  fruit_fly: 446 images
+  healthy_guava: 354 images
+
+Dataset Summary:
+  Training samples: 6692
+  Test samples: 1182
+  Classes: ['anthracose', 'fruit_fly', 'healthy_guava']
+  Feature dimension: 8196
+
+Training Random Forest model...
+[Parallel(n_jobs=-1)]: Using backend ThreadingBackend with 8 concurrent workers.
+[Parallel(n_jobs=-1)]: Done  34 tasks      | elapsed:   12.9s
+[Parallel(n_jobs=-1)]: Done 184 tasks      | elapsed:  1.4min
+[Parallel(n_jobs=-1)]: Done 200 out of 200 | elapsed:  1.5min finished
+
+============================================================
+MODEL EVALUATION
+============================================================
+[Parallel(n_jobs=8)]: Using backend ThreadingBackend with 8 concurrent workers.
+[Parallel(n_jobs=8)]: Done  34 tasks      | elapsed:    0.0s
+[Parallel(n_jobs=8)]: Done 184 tasks      | elapsed:    0.0s
+[Parallel(n_jobs=8)]: Done 200 out of 200 | elapsed:    0.0s finished
+[Parallel(n_jobs=8)]: Using backend ThreadingBackend with 8 concurrent workers.
+[Parallel(n_jobs=8)]: Done  34 tasks      | elapsed:    0.0s
+[Parallel(n_jobs=8)]: Done 184 tasks      | elapsed:    0.0s
+[Parallel(n_jobs=8)]: Done 200 out of 200 | elapsed:    0.0s finished
+
+Training Accuracy: 100.00%
+Test Accuracy: 92.89%
+
+------------------------------------------------------------
+CLASSIFICATION REPORT
+------------------------------------------------------------
+               precision    recall  f1-score   support
+
+   anthracose       0.96      0.92      0.94       382
+    fruit_fly       0.87      1.00      0.93       446
+healthy_guava       0.99      0.85      0.92       354
+
+     accuracy                           0.93      1182
+    macro avg       0.94      0.92      0.93      1182
+ weighted avg       0.94      0.93      0.93      1182
+
+
+Saving results...
+
+============================================================
+RESULTS SAVED SUCCESSFULLY!
+============================================================
+
+All results saved in 'RandomForest_Results/' directory:
+  - rf_model.pkl (trained model)
+  - results.json (all metrics)
+  - classification_report.txt
+  - confusion_matrix.png
+  - accuracy_comparison.png
+  - feature_importance.png
+
+You can view these files anytime without re-running the code!
+
+[Done] exited with code=0 in 402.608 seconds
+

@@ -1,0 +1,239 @@
+[Running] python -u "c:\Users\SATYABRATA MISHRA\Downloads\Final preprocessed data\svm maturity digital code.py"
+================================================================================
+SVM - DIGITAL IMAGE MATURITY CLASSIFICATION
+================================================================================
+Task: Classify guava maturity (immature, mature, semi_mature)
+Image Type: Digital
+Model: Support Vector Machine (SVM)
+================================================================================
+
+--------------------------------------------------------------------------------
+LOADING DIGITAL MATURITY DATASET
+--------------------------------------------------------------------------------
+
+Loading Training data:
+  immature       : 2280 images -> 2280 loaded
+  mature         : 2257 images -> 2257 loaded
+  semi_mature    : 1994 images -> 1994 loaded
+
+Loading Validation data:
+  immature       :  488 images ->  488 loaded
+  mature         :  483 images ->  483 loaded
+  semi_mature    :  427 images ->  427 loaded
+
+Loading Test data:
+  immature       :  490 images ->  490 loaded
+  mature         :  485 images ->  485 loaded
+  semi_mature    :  429 images ->  429 loaded
+
+================================================================================
+DATASET SUMMARY
+================================================================================
+Classes detected: ['immature', 'mature', 'semi_mature']
+Number of classes: 3
+Training samples: 7929
+Test samples: 1404
+Feature dimension: 8310
+================================================================================
+
+Scaling features (critical for SVM performance)...
+[OK] Features scaled using StandardScaler
+
+================================================================================
+TRAINING SVM MODEL
+================================================================================
+
+Model Configuration:
+  - Kernel: RBF (Radial Basis Function)
+  - C (regularization): 1.0 (moderate regularization)
+  - Gamma: scale (auto-computed)
+  - Cache size: 500 MB
+  - Probability estimates: Enabled
+  - Class weight: Balanced
+
+Starting training...
+[LibSVM]....*.*
+optimization finished, #iter = 5423
+obj = -1421.344127, rho = -0.959901
+nSV = 3650, nBSV = 1123
+Total nSV = 3650
+....*.*
+optimization finished, #iter = 5361
+obj = -1394.559591, rho = -0.929407
+nSV = 3602, nBSV = 1069
+Total nSV = 3602
+....*.*
+optimization finished, #iter = 5335
+obj = -1409.251287, rho = -0.885712
+nSV = 3606, nBSV = 1095
+Total nSV = 3606
+....*.*
+optimization finished, #iter = 5379
+obj = -1411.737761, rho = -0.998680
+nSV = 3642, nBSV = 1102
+Total nSV = 3642
+....*.*
+optimization finished, #iter = 5413
+obj = -1408.494602, rho = -0.860114
+nSV = 3636, nBSV = 1087
+Total nSV = 3636
+.....*.*
+optimization finished, #iter = 6562
+obj = -1672.594491, rho = 0.973968
+nSV = 4362, nBSV = 647
+...*..*
+optimization finished, #iter = 5152
+obj = -1445.011741, rho = -0.245415
+nSV = 3489, nBSV = 1050
+Total nSV = 3489
+...*..*
+optimization finished, #iter = 5174
+obj = -1439.727229, rho = -0.175723
+nSV = 3505, nBSV = 1045
+Total nSV = 3505
+...*..*
+optimization finished, #iter = 5076
+obj = -1434.248330, rho = -0.180477
+nSV = 3469, nBSV = 1081
+Total nSV = 3469
+....*.*
+optimization finished, #iter = 5246
+obj = -1443.530535, rho = -0.276526
+nSV = 3520, nBSV = 1039
+Total nSV = 3520
+...*..*
+optimization finished, #iter = 5141
+obj = -1436.359456, rho = -0.335628
+nSV = 3489, nBSV = 1054
+Total nSV = 3489
+....*..*
+optimization finished, #iter = 6365
+obj = -1716.842424, rho = 0.268975
+nSV = 4227, nBSV = 628
+....*.*
+optimization finished, #iter = 5274
+obj = -1846.306612, rho = 1.161829
+nSV = 3844, nBSV = 1530
+Total nSV = 3844
+....*.*
+optimization finished, #iter = 5262
+obj = -1841.532250, rho = 1.177257
+nSV = 3843, nBSV = 1518
+Total nSV = 3843
+....*.*
+optimization finished, #iter = 5296
+obj = -1850.587284, rho = 1.187384
+nSV = 3846, nBSV = 1501
+Total nSV = 3846
+....*.*
+optimization finished, #iter = 5282
+obj = -1857.979415, rho = 1.197986
+nSV = 3868, nBSV = 1501
+Total nSV = 3868
+....*.*
+optimization finished, #iter = 5234
+obj = -1854.794558, rho = 1.125769
+nSV = 3853, nBSV = 1543
+Total nSV = 3853
+.....*.*
+optimization finished, #iter = 6632
+obj = -2242.268563, rho = -1.193556
+nSV = 4726, nBSV = 1104
+Total nSV = 7235
+
+[SUCCESS] Model trained successfully!
+
+================================================================================
+MODEL EVALUATION
+================================================================================
+
+TRAINING METRICS:
+  Accuracy:  97.67%
+  Precision: 0.9769
+  Recall:    0.9767
+  F1-Score:  0.9767
+
+TEST METRICS:
+  Accuracy:  76.71%
+  Precision: 0.7730
+  Recall:    0.7671
+  F1-Score:  0.7686
+
+OVERFITTING ANALYSIS:
+  Gap: 20.96% (Severe overfitting - Model memorizing data)
+
+--------------------------------------------------------------------------------
+DETAILED CLASSIFICATION REPORT
+--------------------------------------------------------------------------------
+              precision    recall  f1-score   support
+
+    immature     0.8600    0.7898    0.8234       490
+      mature     0.7638    0.7402    0.7518       485
+ semi_mature     0.6839    0.7716    0.7251       429
+
+    accuracy                         0.7671      1404
+   macro avg     0.7692    0.7672    0.7668      1404
+weighted avg     0.7730    0.7671    0.7686      1404
+
+
+--------------------------------------------------------------------------------
+SVM MODEL INFORMATION
+--------------------------------------------------------------------------------
+Number of support vectors: [2236 2608 2391]
+Support vectors per class: {'immature': 2236, 'mature': 2608, 'semi_mature': 2391}
+Total support vectors: 7235
+Support vector ratio: 91.25%
+
+--------------------------------------------------------------------------------
+SAVING RESULTS
+--------------------------------------------------------------------------------
+[OK] Models saved: svm_model.pkl, scaler.pkl
+[OK] Results saved: results.json, classification_report.txt
+
+Generating visualizations...
+[OK] Saved: confusion_matrix.png
+[OK] Saved: performance_metrics.png
+[OK] Saved: overfitting_analysis.png
+[OK] Saved: support_vectors.png
+[OK] Saved: class_distribution.png
+
+================================================================================
+RESULTS SAVED SUCCESSFULLY!
+================================================================================
+
+All results saved in 'Digital_Maturity_SVM_Results/' directory:
+  [OK] svm_model.pkl (trained model)
+  [OK] scaler.pkl (feature scaler)
+  [OK] results.json (all metrics)
+  [OK] classification_report.txt
+  [OK] confusion_matrix.png
+  [OK] performance_metrics.png
+  [OK] overfitting_analysis.png
+  [OK] support_vectors.png
+  [OK] class_distribution.png
+
+You can view these files anytime without re-running the code!
+
+================================================================================
+KEY RESULTS SUMMARY
+================================================================================
+Model: Support Vector Machine (SVM)
+Image Type: Digital
+Task: Maturity Classification
+Classes: immature, mature, semi_mature
+
+Test Accuracy: 76.71%
+Test F1-Score: 0.7686
+Overfitting Gap: 20.96%
+Support Vectors: 7235/7929 (91.2%)
+================================================================================
+
+[OK] Memory cleaned up
+
+================================================================================
+SCRIPT COMPLETED SUCCESSFULLY
+================================================================================
+
+
+[Done] exited with code=0 in 3726.834 seconds
+

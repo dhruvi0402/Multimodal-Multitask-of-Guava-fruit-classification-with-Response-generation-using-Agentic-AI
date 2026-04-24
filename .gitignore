@@ -1,0 +1,19 @@
+# Dataset
+Dataset/
+
+# Large model files
+*.keras
+*.h5
+*.pth
+*.pt
+*.pkl
+
+# Python
+__pycache__/
+*.pyc
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Mac
+.DS_Store

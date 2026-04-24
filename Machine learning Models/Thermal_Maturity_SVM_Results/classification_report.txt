@@ -1,0 +1,18 @@
+SVM THERMAL MATURITY CLASSIFICATION REPORT
+================================================================================
+
+Classes: immature, mature, semi_mature
+Training Accuracy: 98.04%
+Test Accuracy: 74.84%
+Overfitting Gap: 23.20%
+Support Vectors: 7410
+
+              precision    recall  f1-score   support
+
+    immature     0.8093    0.7332    0.7694       521
+      mature     0.7307    0.7698    0.7498       504
+ semi_mature     0.7028    0.7413    0.7215       402
+
+    accuracy                         0.7484      1427
+   macro avg     0.7476    0.7481    0.7469      1427
+weighted avg     0.7516    0.7484    0.7490      1427

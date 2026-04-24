@@ -1,0 +1,239 @@
+ -> 2424 loaded
+  mature         : 2346 images -> 2346 loaded
+  semi_mature    : 1869 images -> 1869 loaded
+
+Loading Validation data:
+  immature       :  519 images ->  519 loaded
+  mature         :  502 images ->  502 loaded
+  semi_mature    :  400 images ->  400 loaded
+
+Loading Test data:
+  immature       :  521 images ->  521 loaded
+  mature         :  504 images ->  504 loaded
+  semi_mature    :  402 images ->  402 loaded
+
+================================================================================
+DATASET SUMMARY
+================================================================================
+Classes detected: ['immature', 'mature', 'semi_mature']
+Number of classes: 3
+Training samples: 8060
+Test samples: 1427
+Feature dimension: 8301
+================================================================================
+
+================================================================================
+TRAINING RANDOM FOREST MODEL
+================================================================================
+
+Model Configuration:
+  - Number of trees (n_estimators): 100
+  - Max tree depth: 15 (prevents overfitting)
+  - Min samples to split: 10
+  - Min samples per leaf: 4
+  - Max features per split: sqrt
+  - Bootstrap sampling: Enabled
+  - Class weights: Balanced
+
+Starting training...
+
+[Parallel(n_jobs=-1)]: Using backend ThreadingBackend with 8 concurrent workers.
+building tree 1 of 100building tree 2 of 100
+
+building tree 3 of 100
+building tree 4 of 100
+building tree 5 of 100
+building tree 6 of 100building tree 7 of 100
+
+building tree 8 of 100
+building tree 9 of 100
+building tree 10 of 100
+building tree 11 of 100
+building tree 12 of 100
+building tree 13 of 100
+building tree 14 of 100
+building tree 15 of 100
+building tree 16 of 100
+building tree 17 of 100
+building tree 18 of 100
+building tree 19 of 100
+building tree 20 of 100
+building tree 21 of 100
+building tree 22 of 100
+building tree 23 of 100
+building tree 24 of 100
+building tree 25 of 100
+building tree 26 of 100
+building tree 27 of 100
+building tree 28 of 100
+building tree 29 of 100
+building tree 30 of 100
+building tree 31 of 100
+building tree 32 of 100
+building tree 33 of 100
+[Parallel(n_jobs=-1)]: Done  25 tasks      | elapsed:    3.8s
+building tree 34 of 100
+building tree 35 of 100
+building tree 36 of 100
+building tree 37 of 100
+building tree 38 of 100
+building tree 39 of 100
+building tree 40 of 100
+building tree 41 of 100
+building tree 42 of 100
+building tree 43 of 100
+building tree 44 of 100
+building tree 45 of 100
+building tree 46 of 100
+building tree 47 of 100
+building tree 48 of 100
+building tree 49 of 100
+building tree 50 of 100
+building tree 51 of 100
+building tree 52 of 100
+building tree 53 of 100
+building tree 54 of 100
+building tree 55 of 100
+building tree 56 of 100
+building tree 57 of 100
+building tree 58 of 100
+building tree 59 of 100
+building tree 60 of 100
+building tree 61 of 100
+building tree 62 of 100
+building tree 63 of 100
+building tree 64 of 100
+building tree 65 of 100
+building tree 66 of 100
+building tree 67 of 100
+building tree 68 of 100
+building tree 69 of 100
+building tree 70 of 100
+building tree 71 of 100
+building tree 72 of 100
+building tree 73 of 100
+building tree 74 of 100
+building tree 75 of 100
+building tree 76 of 100
+building tree 77 of 100
+building tree 78 of 100
+building tree 79 of 100
+building tree 80 of 100
+building tree 81 of 100
+building tree 82 of 100
+building tree 83 of 100
+building tree 84 of 100
+building tree 85 of 100
+building tree 86 of 100
+building tree 87 of 100
+building tree 88 of 100
+building tree 89 of 100
+building tree 90 of 100
+building tree 91 of 100
+building tree 92 of 100
+building tree 93 of 100
+building tree 94 of 100
+building tree 95 of 100
+building tree 96 of 100
+building tree 97 of 100
+building tree 98 of 100
+building tree 99 of 100
+building tree 100 of 100
+[Parallel(n_jobs=-1)]: Done 100 out of 100 | elapsed:  1.7min finished
+
+[SUCCESS] Model trained successfully!
+
+================================================================================
+MODEL EVALUATION
+================================================================================
+[Parallel(n_jobs=8)]: Using backend ThreadingBackend with 8 concurrent workers.
+[Parallel(n_jobs=8)]: Done  25 tasks      | elapsed:    0.6s
+[Parallel(n_jobs=8)]: Done 100 out of 100 | elapsed:    1.5s finished
+[Parallel(n_jobs=8)]: Using backend ThreadingBackend with 8 concurrent workers.
+[Parallel(n_jobs=8)]: Done  25 tasks      | elapsed:    0.3s
+[Parallel(n_jobs=8)]: Done 100 out of 100 | elapsed:    0.7s finished
+
+TRAINING METRICS:
+  Accuracy:  99.93%
+  Precision: 0.9993
+  Recall:    0.9993
+  F1-Score:  0.9993
+
+TEST METRICS:
+  Accuracy:  68.89%
+  Precision: 0.7009
+  Recall:    0.6889
+  F1-Score:  0.6882
+
+OVERFITTING ANALYSIS:
+  Gap: 31.04% (Severe overfitting - Model memorizing data)
+
+--------------------------------------------------------------------------------
+DETAILED CLASSIFICATION REPORT
+--------------------------------------------------------------------------------
+              precision    recall  f1-score   support
+
+    immature     0.7835    0.6392    0.7040       521
+      mature     0.6275    0.7956    0.7017       504
+ semi_mature     0.6860    0.6194    0.6510       402
+
+    accuracy                         0.6889      1427
+   macro avg     0.6990    0.6847    0.6856      1427
+weighted avg     0.7009    0.6889    0.6882      1427
+
+
+--------------------------------------------------------------------------------
+SAVING RESULTS
+--------------------------------------------------------------------------------
+[OK] Model saved: rf_model.pkl
+[OK] Results saved: results.json, classification_report.txt
+
+Generating visualizations...
+[OK] Saved: confusion_matrix.png
+[OK] Saved: performance_metrics.png
+[OK] Saved: overfitting_analysis.png
+[OK] Saved: feature_importance.png
+[OK] Saved: tree_depth_distribution.png
+[OK] Saved: class_distribution.png
+
+================================================================================
+RESULTS SAVED SUCCESSFULLY!
+================================================================================
+
+All results saved in 'Thermal_Maturity_RandomForest_Results/' directory:
+  [OK] rf_model.pkl (trained model)
+  [OK] results.json (all metrics)
+  [OK] classification_report.txt
+  [OK] confusion_matrix.png
+  [OK] performance_metrics.png
+  [OK] overfitting_analysis.png
+  [OK] feature_importance.png
+  [OK] tree_depth_distribution.png
+  [OK] class_distribution.png
+
+You can view these files anytime without re-running the code!
+
+================================================================================
+KEY RESULTS SUMMARY
+================================================================================
+Model: Random Forest
+Image Type: Thermal
+Task: Maturity Classification
+Classes: immature, mature, semi_mature
+
+Number of Trees: 100
+Test Accuracy: 68.89%
+Test F1-Score: 0.6882
+Overfitting Gap: 31.04%
+Mean Tree Depth: 15.0
+================================================================================
+
+[OK] Memory cleaned up
+
+================================================================================
+SCRIPT COMPLETED SUCCESSFULLY
+================================================================================
+
+
+[Done] exited with code=0 in 412.918 seconds
+

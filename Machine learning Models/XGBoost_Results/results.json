@@ -1,0 +1,32 @@
+{
+    "model": "XGBoost",
+    "timestamp": "2025-10-10 15:13:43",
+    "parameters": {
+        "n_estimators": 50,
+        "max_depth": 6,
+        "learning_rate": 0.1,
+        "subsample": 0.8,
+        "colsample_bytree": 0.8,
+        "reg_alpha": 0.1,
+        "reg_lambda": 1.0,
+        "early_stopping_rounds": 3
+    },
+    "training_info": {
+        "best_iteration": 49,
+        "total_iterations": 50
+    },
+    "training_metrics": {
+        "accuracy": 0.9994022713687986,
+        "precision": 0.9994032160209221,
+        "recall": 0.9994022713687986,
+        "f1_score": 0.9994023226017035
+    },
+    "test_metrics": {
+        "accuracy": 0.9856175972927242,
+        "precision": 0.9857820849448983,
+        "recall": 0.9856175972927242,
+        "f1_score": 0.9855764758747663
+    },
+    "overfitting_gap_percent": 1.378467407607431,
+    "classification_report": "               precision    recall  f1-score   support\n\n   anthracose     0.9819    0.9948    0.9883       382\n    fruit_fly     0.9801    0.9955    0.9878       446\nhealthy_guava     0.9971    0.9633    0.9799       354\n\n     accuracy                         0.9856      1182\n    macro avg     0.9864    0.9845    0.9853      1182\n weighted avg     0.9858    0.9856    0.9856      1182\n"
+}

@@ -1,0 +1,40 @@
+{
+    "model": "XGBoost",
+    "image_type": "Thermal",
+    "task": "Maturity Classification",
+    "timestamp": "2025-10-11 11:50:41",
+    "classes": [
+        "immature",
+        "mature",
+        "semi_mature"
+    ],
+    "parameters": {
+        "n_estimators": 50,
+        "max_depth": 6,
+        "learning_rate": 0.1,
+        "subsample": 0.8,
+        "colsample_bytree": 0.8,
+        "reg_alpha": 0.1,
+        "reg_lambda": 1.0,
+        "early_stopping_rounds": 3
+    },
+    "training_info": {
+        "best_iteration": 49,
+        "total_iterations": 50,
+        "feature_dimension": 8301
+    },
+    "training_metrics": {
+        "accuracy": 0.9828784119106699,
+        "precision": 0.9831474675302962,
+        "recall": 0.9828784119106699,
+        "f1_score": 0.9829040362332375
+    },
+    "test_metrics": {
+        "accuracy": 0.7554309740714786,
+        "precision": 0.7610463592359075,
+        "recall": 0.7554309740714786,
+        "f1_score": 0.755234156071593
+    },
+    "overfitting_gap_percent": 22.74474378391913,
+    "classification_report": "              precision    recall  f1-score   support\n\n    immature     0.8134    0.7198    0.7637       521\n      mature     0.7056    0.8274    0.7616       504\n semi_mature     0.7627    0.7114    0.7362       402\n\n    accuracy                         0.7554      1427\n   macro avg     0.7606    0.7529    0.7539      1427\nweighted avg     0.7610    0.7554    0.7552      1427\n"
+}

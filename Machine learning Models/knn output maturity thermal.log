@@ -1,0 +1,165 @@
+[Running] python -u "c:\Users\SATYABRATA MISHRA\Downloads\Final preprocessed data\knn maturity  thermal.py"
+================================================================================
+K-NEAREST NEIGHBORS - THERMAL IMAGE MATURITY CLASSIFICATION
+================================================================================
+Task: Classify guava maturity (immature, mature, semi_mature)
+Image Type: Thermal
+Model: K-Nearest Neighbors (KNN)
+================================================================================
+
+--------------------------------------------------------------------------------
+LOADING THERMAL MATURITY DATASET
+--------------------------------------------------------------------------------
+
+Loading Training data:
+  immature       : 2424 images -> 2424 loaded
+  mature         : 2346 images -> 2346 loaded
+  semi_mature    : 1869 images -> 1869 loaded
+
+Loading Validation data:
+  immature       :  519 images ->  519 loaded
+  mature         :  502 images ->  502 loaded
+  semi_mature    :  400 images ->  400 loaded
+
+Loading Test data:
+  immature       :  521 images ->  521 loaded
+  mature         :  504 images ->  504 loaded
+  semi_mature    :  402 images ->  402 loaded
+
+================================================================================
+DATASET SUMMARY
+================================================================================
+Classes detected: ['immature', 'mature', 'semi_mature']
+Number of classes: 3
+Training samples: 8060
+Test samples: 1427
+Feature dimension: 8301
+================================================================================
+
+Scaling features (CRITICAL for KNN distance calculations)...
+[OK] Features scaled using StandardScaler
+
+================================================================================
+FINDING OPTIMAL K VALUE
+================================================================================
+
+Testing K values: [3, 5, 7, 9, 11, 13, 15]
+Using 3-fold cross-validation on training set...
+--------------------------------------------------------------------------------
+K= 3: CV Accuracy = 68.49% (+/- 1.38%)
+K= 5: CV Accuracy = 68.51% (+/- 2.03%)
+K= 7: CV Accuracy = 67.89% (+/- 1.65%)
+K= 9: CV Accuracy = 67.32% (+/- 2.24%)
+K=11: CV Accuracy = 66.81% (+/- 2.62%)
+K=13: CV Accuracy = 66.40% (+/- 2.25%)
+K=15: CV Accuracy = 65.86% (+/- 2.12%)
+
+[INFO] Optimal K value: 5
+[INFO] Best CV Accuracy: 68.51%
+
+================================================================================
+TRAINING KNN MODEL
+================================================================================
+
+Model Configuration:
+  - K (number of neighbors): 5
+  - Distance weighting: Enabled (closer neighbors have more influence)
+  - Distance metric: Euclidean
+  - Algorithm: Auto (selects best for dataset)
+
+Starting training...
+
+[SUCCESS] Model trained successfully!
+
+================================================================================
+MODEL EVALUATION
+================================================================================
+
+TRAINING METRICS:
+  Accuracy:  99.96%
+  Precision: 0.9996
+  Recall:    0.9996
+  F1-Score:  0.9996
+
+TEST METRICS:
+  Accuracy:  74.28%
+  Precision: 0.7428
+  Recall:    0.7428
+  F1-Score:  0.7425
+
+OVERFITTING ANALYSIS:
+  Gap: 25.68% (Severe overfitting - Model memorizing data)
+
+--------------------------------------------------------------------------------
+DETAILED CLASSIFICATION REPORT
+--------------------------------------------------------------------------------
+              precision    recall  f1-score   support
+
+    immature     0.7921    0.7678    0.7797       521
+      mature     0.7397    0.7837    0.7611       504
+ semi_mature     0.6830    0.6592    0.6709       402
+
+    accuracy                         0.7428      1427
+   macro avg     0.7383    0.7369    0.7372      1427
+weighted avg     0.7428    0.7428    0.7425      1427
+
+
+--------------------------------------------------------------------------------
+SAVING RESULTS
+--------------------------------------------------------------------------------
+[OK] Model saved: knn_model.pkl
+[OK] Scaler saved: scaler.pkl
+[OK] Results saved: results.json, classification_report.txt
+
+Generating visualizations...
+[OK] Saved: confusion_matrix.png
+[OK] Saved: performance_metrics.png
+[OK] Saved: overfitting_analysis.png
+[OK] Saved: k_value_cv_analysis.png
+
+Testing all K values on test set for comparison...
+[OK] Saved: k_value_comparison.png
+[OK] Saved: class_distribution.png
+
+================================================================================
+RESULTS SAVED SUCCESSFULLY!
+================================================================================
+
+All results saved in 'Thermal_Maturity_KNN_Results/' directory:
+  [OK] knn_model.pkl (trained model)
+  [OK] scaler.pkl (feature scaler)
+  [OK] results.json (all metrics)
+  [OK] classification_report.txt
+  [OK] confusion_matrix.png
+  [OK] performance_metrics.png
+  [OK] overfitting_analysis.png
+  [OK] k_value_cv_analysis.png
+  [OK] k_value_comparison.png
+  [OK] class_distribution.png
+
+You can view these files anytime without re-running the code!
+
+================================================================================
+KEY RESULTS SUMMARY
+================================================================================
+Model: K-Nearest Neighbors (KNN)
+Image Type: Thermal
+Task: Maturity Classification
+Classes: immature, mature, semi_mature
+
+Optimal K Value: 5
+Test Accuracy: 74.28%
+Test F1-Score: 0.7425
+Overfitting Gap: 25.68%
+Best CV Accuracy: 68.51%
+================================================================================
+
+[OK] Memory cleaned up
+
+================================================================================
+SCRIPT COMPLETED SUCCESSFULLY
+================================================================================
+
+
+[Done] exited with code=0 in 524.489 seconds
+

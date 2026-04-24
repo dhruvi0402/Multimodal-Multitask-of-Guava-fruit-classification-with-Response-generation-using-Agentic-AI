@@ -1,0 +1,41 @@
+{
+    "model": "Random Forest",
+    "image_type": "Thermal",
+    "task": "Maturity Classification",
+    "timestamp": "2025-10-11 13:05:01",
+    "classes": [
+        "immature",
+        "mature",
+        "semi_mature"
+    ],
+    "parameters": {
+        "n_estimators": 100,
+        "max_depth": 15,
+        "min_samples_split": 10,
+        "min_samples_leaf": 4,
+        "max_features": "sqrt",
+        "class_weight": "balanced",
+        "image_size": [
+            128,
+            128
+        ]
+    },
+    "model_info": {
+        "n_trees": 100,
+        "feature_dimension": 8301
+    },
+    "training_metrics": {
+        "accuracy": 0.9992555831265508,
+        "precision": 0.9992555831265508,
+        "recall": 0.9992555831265508,
+        "f1_score": 0.9992555831265508
+    },
+    "test_metrics": {
+        "accuracy": 0.6888577435178697,
+        "precision": 0.7009478484835034,
+        "recall": 0.6888577435178697,
+        "f1_score": 0.6882443761471428
+    },
+    "overfitting_gap_percent": 31.039783960868117,
+    "classification_report": "              precision    recall  f1-score   support\n\n    immature     0.7835    0.6392    0.7040       521\n      mature     0.6275    0.7956    0.7017       504\n semi_mature     0.6860    0.6194    0.6510       402\n\n    accuracy                         0.6889      1427\n   macro avg     0.6990    0.6847    0.6856      1427\nweighted avg     0.7009    0.6889    0.6882      1427\n"
+}

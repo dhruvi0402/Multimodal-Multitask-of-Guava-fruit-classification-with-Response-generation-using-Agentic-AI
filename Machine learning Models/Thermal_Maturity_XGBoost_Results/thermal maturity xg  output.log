@@ -1,0 +1,196 @@
+[Running] python -u "c:\Users\SATYABRATA MISHRA\Downloads\Final preprocessed data\xg boost on thermal.py"
+================================================================================
+XGBOOST - THERMAL IMAGE MATURITY CLASSIFICATION
+================================================================================
+Task: Classify guava maturity (immature, mature, semi_mature)
+Image Type: Thermal
+Model: XGBoost with Early Stopping
+================================================================================
+
+--------------------------------------------------------------------------------
+LOADING THERMAL MATURITY DATASET
+--------------------------------------------------------------------------------
+
+Loading Training data:
+  immature       : 2424 images -> 2424 loaded
+  mature         : 2346 images -> 2346 loaded
+  semi_mature    : 1869 images -> 1869 loaded
+
+Loading Validation data:
+  immature       :  519 images ->  519 loaded
+  mature         :  502 images ->  502 loaded
+  semi_mature    :  400 images ->  400 loaded
+
+Loading Test data:
+  immature       :  521 images ->  521 loaded
+  mature         :  504 images ->  504 loaded
+  semi_mature    :  402 images ->  402 loaded
+
+================================================================================
+DATASET SUMMARY
+================================================================================
+Classes detected: ['immature', 'mature', 'semi_mature']
+Number of classes: 3
+Training samples: 8060
+Test samples: 1427
+Feature dimension: 8301
+================================================================================
+
+Scaling features...
+[OK] Features scaled using StandardScaler
+
+================================================================================
+TRAINING XGBOOST MODEL
+================================================================================
+
+Model Configuration:
+  - Max iterations (n_estimators): 50
+  - Early stopping patience: 3
+  - Max tree depth: 6 (prevents overfitting)
+  - Learning rate: 0.1
+  - Subsample ratio: 0.8
+  - L1 regularization (alpha): 0.1
+  - L2 regularization (lambda): 1.0
+
+Starting training...
+
+[0]	validation_0-mlogloss:1.05866	validation_1-mlogloss:1.07127
+[1]	validation_0-mlogloss:1.02004	validation_1-mlogloss:1.04511
+[2]	validation_0-mlogloss:0.98478	validation_1-mlogloss:1.02079
+[3]	validation_0-mlogloss:0.95218	validation_1-mlogloss:1.00049
+[4]	validation_0-mlogloss:0.92244	validation_1-mlogloss:0.97979
+[5]	validation_0-mlogloss:0.89425	validation_1-mlogloss:0.96058
+[6]	validation_0-mlogloss:0.86640	validation_1-mlogloss:0.94164
+[7]	validation_0-mlogloss:0.83865	validation_1-mlogloss:0.92332
+[8]	validation_0-mlogloss:0.81598	validation_1-mlogloss:0.90808
+[9]	validation_0-mlogloss:0.79419	validation_1-mlogloss:0.89355
+[10]	validation_0-mlogloss:0.77378	validation_1-mlogloss:0.88039
+[11]	validation_0-mlogloss:0.75617	validation_1-mlogloss:0.87055
+[12]	validation_0-mlogloss:0.73710	validation_1-mlogloss:0.85868
+[13]	validation_0-mlogloss:0.71794	validation_1-mlogloss:0.84675
+[14]	validation_0-mlogloss:0.70128	validation_1-mlogloss:0.83734
+[15]	validation_0-mlogloss:0.68580	validation_1-mlogloss:0.82955
+[16]	validation_0-mlogloss:0.66983	validation_1-mlogloss:0.81953
+[17]	validation_0-mlogloss:0.65405	validation_1-mlogloss:0.81269
+[18]	validation_0-mlogloss:0.63791	validation_1-mlogloss:0.80542
+[19]	validation_0-mlogloss:0.62334	validation_1-mlogloss:0.79799
+[20]	validation_0-mlogloss:0.60954	validation_1-mlogloss:0.79177
+[21]	validation_0-mlogloss:0.59642	validation_1-mlogloss:0.78470
+[22]	validation_0-mlogloss:0.58445	validation_1-mlogloss:0.77694
+[23]	validation_0-mlogloss:0.57062	validation_1-mlogloss:0.76998
+[24]	validation_0-mlogloss:0.55945	validation_1-mlogloss:0.76461
+[25]	validation_0-mlogloss:0.54839	validation_1-mlogloss:0.75807
+[26]	validation_0-mlogloss:0.53632	validation_1-mlogloss:0.75251
+[27]	validation_0-mlogloss:0.52668	validation_1-mlogloss:0.74798
+[28]	validation_0-mlogloss:0.51502	validation_1-mlogloss:0.74223
+[29]	validation_0-mlogloss:0.50382	validation_1-mlogloss:0.73676
+[30]	validation_0-mlogloss:0.49302	validation_1-mlogloss:0.73124
+[31]	validation_0-mlogloss:0.48233	validation_1-mlogloss:0.72651
+[32]	validation_0-mlogloss:0.47441	validation_1-mlogloss:0.72162
+[33]	validation_0-mlogloss:0.46604	validation_1-mlogloss:0.71840
+[34]	validation_0-mlogloss:0.45823	validation_1-mlogloss:0.71520
+[35]	validation_0-mlogloss:0.44745	validation_1-mlogloss:0.70994
+[36]	validation_0-mlogloss:0.43981	validation_1-mlogloss:0.70648
+[37]	validation_0-mlogloss:0.43170	validation_1-mlogloss:0.70341
+[38]	validation_0-mlogloss:0.42402	validation_1-mlogloss:0.69875
+[39]	validation_0-mlogloss:0.41668	validation_1-mlogloss:0.69474
+[40]	validation_0-mlogloss:0.40980	validation_1-mlogloss:0.69122
+[41]	validation_0-mlogloss:0.40369	validation_1-mlogloss:0.68834
+[42]	validation_0-mlogloss:0.39639	validation_1-mlogloss:0.68503
+[43]	validation_0-mlogloss:0.38797	validation_1-mlogloss:0.68014
+[44]	validation_0-mlogloss:0.38174	validation_1-mlogloss:0.67736
+[45]	validation_0-mlogloss:0.37573	validation_1-mlogloss:0.67372
+[46]	validation_0-mlogloss:0.36835	validation_1-mlogloss:0.67207
+[47]	validation_0-mlogloss:0.36222	validation_1-mlogloss:0.66928
+[48]	validation_0-mlogloss:0.35575	validation_1-mlogloss:0.66608
+[49]	validation_0-mlogloss:0.35056	validation_1-mlogloss:0.66229
+
+[SUCCESS] Model trained successfully!
+[INFO] Best iteration: 49
+[INFO] Total iterations completed: 50
+[INFO] Training completed all 50 iterations
+
+================================================================================
+MODEL EVALUATION
+================================================================================
+
+TRAINING METRICS:
+  Accuracy:  98.29%
+  Precision: 0.9831
+  Recall:    0.9829
+  F1-Score:  0.9829
+
+TEST METRICS:
+  Accuracy:  75.54%
+  Precision: 0.7610
+  Recall:    0.7554
+  F1-Score:  0.7552
+
+OVERFITTING ANALYSIS:
+  Gap: 22.74% (Severe overfitting - Model memorizing data)
+
+--------------------------------------------------------------------------------
+DETAILED CLASSIFICATION REPORT
+--------------------------------------------------------------------------------
+              precision    recall  f1-score   support
+
+    immature     0.8134    0.7198    0.7637       521
+      mature     0.7056    0.8274    0.7616       504
+ semi_mature     0.7627    0.7114    0.7362       402
+
+    accuracy                         0.7554      1427
+   macro avg     0.7606    0.7529    0.7539      1427
+weighted avg     0.7610    0.7554    0.7552      1427
+
+
+Saving results...
+[OK] Models saved: xgb_model.pkl, scaler.pkl
+[OK] Results saved: results.json, classification_report.txt
+
+Generating visualizations...
+[OK] Saved: confusion_matrix.png
+[OK] Saved: training_loss.png
+[OK] Saved: performance_metrics.png
+[OK] Saved: feature_importance.png
+[OK] Saved: overfitting_analysis.png
+
+================================================================================
+RESULTS SAVED SUCCESSFULLY!
+================================================================================
+
+All results saved in 'Thermal_Maturity_XGBoost_Results/' directory:
+  [OK] xgb_model.pkl (trained model)
+  [OK] scaler.pkl (feature scaler)
+  [OK] results.json (all metrics)
+  [OK] classification_report.txt
+  [OK] confusion_matrix.png
+  [OK] training_loss.png
+  [OK] performance_metrics.png
+  [OK] feature_importance.png
+  [OK] overfitting_analysis.png
+
+You can view these files anytime without re-running the code!
+
+================================================================================
+KEY RESULTS SUMMARY
+================================================================================
+Model: XGBoost
+Image Type: Thermal
+Task: Maturity Classification
+Classes: immature, mature, semi_mature
+
+Test Accuracy: 75.54%
+Test F1-Score: 0.7552
+Overfitting Gap: 22.74%
+Best Iteration: 49/50
+================================================================================
+
+[OK] Memory cleaned up
+
+================================================================================
+SCRIPT COMPLETED SUCCESSFULLY
+================================================================================
+
+
+[Done] exited with code=0 in 787.947 seconds
+

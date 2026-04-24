@@ -1,0 +1,41 @@
+{
+    "model": "Random Forest",
+    "image_type": "Digital",
+    "task": "Maturity Classification",
+    "timestamp": "2025-10-12 11:31:33",
+    "classes": [
+        "immature",
+        "mature",
+        "semi_mature"
+    ],
+    "parameters": {
+        "n_estimators": 100,
+        "max_depth": 15,
+        "min_samples_split": 10,
+        "min_samples_leaf": 4,
+        "max_features": "sqrt",
+        "class_weight": "balanced",
+        "image_size": [
+            128,
+            128
+        ]
+    },
+    "model_info": {
+        "n_trees": 100,
+        "feature_dimension": 8310
+    },
+    "training_metrics": {
+        "accuracy": 0.9935679152478244,
+        "precision": 0.9936435669919744,
+        "recall": 0.9935679152478244,
+        "f1_score": 0.9935800148570635
+    },
+    "test_metrics": {
+        "accuracy": 0.8497150997150997,
+        "precision": 0.8495878048671437,
+        "recall": 0.8497150997150997,
+        "f1_score": 0.8495318099099007
+    },
+    "overfitting_gap_percent": 14.385281553272467,
+    "classification_report": "              precision    recall  f1-score   support\n\n    immature     0.8693    0.8959    0.8824       490\n      mature     0.8710    0.8495    0.8601       485\n semi_mature     0.8028    0.7972    0.8000       429\n\n    accuracy                         0.8497      1404\n   macro avg     0.8477    0.8475    0.8475      1404\nweighted avg     0.8496    0.8497    0.8495      1404\n"
+}

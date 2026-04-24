@@ -1,0 +1,69 @@
+{
+    "model": "K-Nearest Neighbors (KNN)",
+    "image_type": "Thermal",
+    "task": "Maturity Classification",
+    "timestamp": "2025-10-11 13:21:18",
+    "classes": [
+        "immature",
+        "mature",
+        "semi_mature"
+    ],
+    "parameters": {
+        "n_neighbors": 5,
+        "weights": "distance",
+        "metric": "euclidean",
+        "image_size": [
+            128,
+            128
+        ]
+    },
+    "k_value_analysis": {
+        "tested_k_values": [
+            3,
+            5,
+            7,
+            9,
+            11,
+            13,
+            15
+        ],
+        "cv_accuracies": [
+            0.6848659463031467,
+            0.6851152091142714,
+            0.6789110729865712,
+            0.6732049082558595,
+            0.66811869066499,
+            0.664023704953379,
+            0.6585644937618714
+        ],
+        "cv_std_deviations": [
+            0.013821185968132713,
+            0.02030924686414028,
+            0.01645024060631342,
+            0.022379166472146755,
+            0.026212542247837537,
+            0.02252909631302586,
+            0.02124333267013401
+        ],
+        "optimal_k": 5,
+        "best_cv_accuracy": 0.6851152091142714
+    },
+    "model_info": {
+        "feature_dimension": 8301,
+        "training_samples": 8060
+    },
+    "training_metrics": {
+        "accuracy": 0.9996277915632754,
+        "precision": 0.999628183224205,
+        "recall": 0.9996277915632754,
+        "f1_score": 0.9996277664181096
+    },
+    "test_metrics": {
+        "accuracy": 0.7428170988086895,
+        "precision": 0.7428480110447657,
+        "recall": 0.7428170988086895,
+        "f1_score": 0.7424792111595514
+    },
+    "overfitting_gap_percent": 25.68106927545859,
+    "classification_report": "              precision    recall  f1-score   support\n\n    immature     0.7921    0.7678    0.7797       521\n      mature     0.7397    0.7837    0.7611       504\n semi_mature     0.6830    0.6592    0.6709       402\n\n    accuracy                         0.7428      1427\n   macro avg     0.7383    0.7369    0.7372      1427\nweighted avg     0.7428    0.7428    0.7425      1427\n"
+}

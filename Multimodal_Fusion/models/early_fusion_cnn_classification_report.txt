@@ -1,0 +1,11 @@
+Early Fusion Classification Report
+============================================================
+              precision    recall  f1-score   support
+
+    immature     0.9816    0.9836    0.9826       488
+      mature     0.9876    0.9896    0.9886       483
+ semi_mature     0.9749    0.9700    0.9724       400
+
+    accuracy                         0.9818      1371
+   macro avg     0.9814    0.9811    0.9812      1371
+weighted avg     0.9818    0.9818    0.9818      1371

@@ -1,0 +1,18 @@
+RANDOM FOREST THERMAL MATURITY CLASSIFICATION REPORT
+================================================================================
+
+Classes: immature, mature, semi_mature
+Training Accuracy: 99.93%
+Test Accuracy: 68.89%
+Overfitting Gap: 31.04%
+Number of Trees: 100
+
+              precision    recall  f1-score   support
+
+    immature     0.7835    0.6392    0.7040       521
+      mature     0.6275    0.7956    0.7017       504
+ semi_mature     0.6860    0.6194    0.6510       402
+
+    accuracy                         0.6889      1427
+   macro avg     0.6990    0.6847    0.6856      1427
+weighted avg     0.7009    0.6889    0.6882      1427

@@ -1,0 +1,17 @@
+KNN CLASSIFICATION REPORT
+======================================================================
+
+Optimal K value: 11
+Training Accuracy: 100.00%
+Test Accuracy: 65.82%
+Overfitting Gap: 34.18%
+
+               precision    recall  f1-score   support
+
+   anthracose     0.5528    0.8220    0.6611       382
+    fruit_fly     0.7528    0.4507    0.5638       446
+healthy_guava     0.7579    0.7429    0.7504       354
+
+     accuracy                         0.6582      1182
+    macro avg     0.6879    0.6719    0.6584      1182
+ weighted avg     0.6897    0.6582    0.6511      1182

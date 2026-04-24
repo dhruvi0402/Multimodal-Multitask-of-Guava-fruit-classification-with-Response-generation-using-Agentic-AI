@@ -1,0 +1,18 @@
+RANDOM FOREST DIGITAL MATURITY CLASSIFICATION REPORT
+================================================================================
+
+Classes: immature, mature, semi_mature
+Training Accuracy: 99.36%
+Test Accuracy: 84.97%
+Overfitting Gap: 14.39%
+Number of Trees: 100
+
+              precision    recall  f1-score   support
+
+    immature     0.8693    0.8959    0.8824       490
+      mature     0.8710    0.8495    0.8601       485
+ semi_mature     0.8028    0.7972    0.8000       429
+
+    accuracy                         0.8497      1404
+   macro avg     0.8477    0.8475    0.8475      1404
+weighted avg     0.8496    0.8497    0.8495      1404

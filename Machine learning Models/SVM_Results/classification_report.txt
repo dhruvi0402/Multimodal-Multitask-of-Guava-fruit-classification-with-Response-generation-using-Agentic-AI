@@ -1,0 +1,16 @@
+SVM CLASSIFICATION REPORT
+======================================================================
+
+Training Accuracy: 98.54%
+Test Accuracy: 91.29%
+Overfitting Gap: 7.25%
+
+               precision    recall  f1-score   support
+
+   anthracose     0.9280    0.9110    0.9194       382
+    fruit_fly     0.8647    0.9888    0.9226       446
+healthy_guava     0.9764    0.8192    0.8909       354
+
+     accuracy                         0.9129      1182
+    macro avg     0.9230    0.9063    0.9110      1182
+ weighted avg     0.9186    0.9129    0.9121      1182

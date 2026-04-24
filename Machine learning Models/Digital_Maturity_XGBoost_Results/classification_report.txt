@@ -1,0 +1,18 @@
+XGBOOST DIGITAL MATURITY CLASSIFICATION REPORT
+================================================================================
+
+Classes: immature, mature, semi_mature
+Training Accuracy: 99.16%
+Test Accuracy: 93.95%
+Overfitting Gap: 5.21%
+Best Iteration: 49
+
+              precision    recall  f1-score   support
+
+    immature     0.9485    0.9388    0.9436       490
+      mature     0.9600    0.9402    0.9500       485
+ semi_mature     0.9077    0.9394    0.9233       429
+
+    accuracy                         0.9395      1404
+   macro avg     0.9387    0.9395    0.9389      1404
+weighted avg     0.9400    0.9395    0.9396      1404

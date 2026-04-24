@@ -1,0 +1,223 @@
+[Running] python -u "c:\Users\SATYABRATA MISHRA\Downloads\Final preprocessed data\xg boost on digital image code.py"
+================================================================================
+XGBOOST - DIGITAL IMAGE MATURITY CLASSIFICATION
+================================================================================
+Task: Classify guava maturity (immature, mature, semi_mature)
+Image Type: Digital
+Model: XGBoost with Early Stopping
+================================================================================
+
+--------------------------------------------------------------------------------
+LOADING DIGITAL MATURITY DATASET
+--------------------------------------------------------------------------------
+Traceback (most recent call last):
+  File "c:\Users\SATYABRATA MISHRA\Downloads\Final preprocessed data\xg boost on digital image code.py", line 146, in <module>
+    X_train, y_train, class_names = load_dataset(TRAIN_DIR, "Training")
+                                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\SATYABRATA MISHRA\Downloads\Final preprocessed data\xg boost on digital image code.py", line 116, in load_dataset
+    class_names = sorted([d for d in os.listdir(directory) 
+                                     ^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [WinError 3] The system cannot find the path specified: 'C:\\Users\\SATYABRATA MISHRA\\Downloads\\Final preprocessed data\\Maturity\\train test val split digital\\train'
+
+[Done] exited with code=1 in 23.455 seconds
+
+[Running] python -u "c:\Users\SATYABRATA MISHRA\Downloads\Final preprocessed data\xg boost on digital image code.py"
+================================================================================
+XGBOOST - DIGITAL IMAGE MATURITY CLASSIFICATION
+================================================================================
+Task: Classify guava maturity (immature, mature, semi_mature)
+Image Type: Digital
+Model: XGBoost with Early Stopping
+================================================================================
+
+--------------------------------------------------------------------------------
+LOADING DIGITAL MATURITY DATASET
+--------------------------------------------------------------------------------
+
+Loading Training data:
+  immature       : 2280 images -> 2280 loaded
+  mature         : 2257 images -> 2257 loaded
+  semi_mature    : 1994 images -> 1994 loaded
+
+Loading Validation data:
+  immature       :  488 images ->  488 loaded
+  mature         :  483 images ->  483 loaded
+  semi_mature    :  427 images ->  427 loaded
+
+Loading Test data:
+  immature       :  490 images ->  490 loaded
+  mature         :  485 images ->  485 loaded
+  semi_mature    :  429 images ->  429 loaded
+
+================================================================================
+DATASET SUMMARY
+================================================================================
+Classes detected: ['immature', 'mature', 'semi_mature']
+Number of classes: 3
+Training samples: 7929
+Test samples: 1404
+Feature dimension: 8310
+================================================================================
+
+Scaling features...
+[OK] Features scaled using StandardScaler
+
+================================================================================
+TRAINING XGBOOST MODEL
+================================================================================
+
+Model Configuration:
+  - Max iterations (n_estimators): 50
+  - Early stopping patience: 3
+  - Max tree depth: 6 (prevents overfitting)
+  - Learning rate: 0.1
+  - Subsample ratio: 0.8
+  - L1 regularization (alpha): 0.1
+  - L2 regularization (lambda): 1.0
+
+Starting training...
+
+[0]	validation_0-mlogloss:1.01232	validation_1-mlogloss:1.01997
+[1]	validation_0-mlogloss:0.93689	validation_1-mlogloss:0.95237
+[2]	validation_0-mlogloss:0.86892	validation_1-mlogloss:0.89095
+[3]	validation_0-mlogloss:0.80802	validation_1-mlogloss:0.83742
+[4]	validation_0-mlogloss:0.75472	validation_1-mlogloss:0.78815
+[5]	validation_0-mlogloss:0.70776	validation_1-mlogloss:0.74575
+[6]	validation_0-mlogloss:0.66526	validation_1-mlogloss:0.70885
+[7]	validation_0-mlogloss:0.62643	validation_1-mlogloss:0.67501
+[8]	validation_0-mlogloss:0.59082	validation_1-mlogloss:0.64191
+[9]	validation_0-mlogloss:0.55754	validation_1-mlogloss:0.61184
+[10]	validation_0-mlogloss:0.52718	validation_1-mlogloss:0.58413
+[11]	validation_0-mlogloss:0.49929	validation_1-mlogloss:0.55850
+[12]	validation_0-mlogloss:0.47392	validation_1-mlogloss:0.53545
+[13]	validation_0-mlogloss:0.45147	validation_1-mlogloss:0.51465
+[14]	validation_0-mlogloss:0.42830	validation_1-mlogloss:0.49414
+[15]	validation_0-mlogloss:0.40881	validation_1-mlogloss:0.47694
+[16]	validation_0-mlogloss:0.38845	validation_1-mlogloss:0.45962
+[17]	validation_0-mlogloss:0.37174	validation_1-mlogloss:0.44479
+[18]	validation_0-mlogloss:0.35541	validation_1-mlogloss:0.43006
+[19]	validation_0-mlogloss:0.33956	validation_1-mlogloss:0.41661
+[20]	validation_0-mlogloss:0.32491	validation_1-mlogloss:0.40266
+[21]	validation_0-mlogloss:0.31181	validation_1-mlogloss:0.39155
+[22]	validation_0-mlogloss:0.29771	validation_1-mlogloss:0.37872
+[23]	validation_0-mlogloss:0.28631	validation_1-mlogloss:0.36833
+[24]	validation_0-mlogloss:0.27460	validation_1-mlogloss:0.35859
+[25]	validation_0-mlogloss:0.26482	validation_1-mlogloss:0.35047
+[26]	validation_0-mlogloss:0.25442	validation_1-mlogloss:0.34146
+[27]	validation_0-mlogloss:0.24432	validation_1-mlogloss:0.33319
+[28]	validation_0-mlogloss:0.23543	validation_1-mlogloss:0.32527
+[29]	validation_0-mlogloss:0.22724	validation_1-mlogloss:0.31807
+[30]	validation_0-mlogloss:0.21906	validation_1-mlogloss:0.31094
+[31]	validation_0-mlogloss:0.21128	validation_1-mlogloss:0.30347
+[32]	validation_0-mlogloss:0.20438	validation_1-mlogloss:0.29722
+[33]	validation_0-mlogloss:0.19761	validation_1-mlogloss:0.29090
+[34]	validation_0-mlogloss:0.19014	validation_1-mlogloss:0.28436
+[35]	validation_0-mlogloss:0.18318	validation_1-mlogloss:0.27855
+[36]	validation_0-mlogloss:0.17589	validation_1-mlogloss:0.27228
+[37]	validation_0-mlogloss:0.16948	validation_1-mlogloss:0.26601
+[38]	validation_0-mlogloss:0.16362	validation_1-mlogloss:0.26063
+[39]	validation_0-mlogloss:0.15809	validation_1-mlogloss:0.25636
+[40]	validation_0-mlogloss:0.15304	validation_1-mlogloss:0.25161
+[41]	validation_0-mlogloss:0.14837	validation_1-mlogloss:0.24730
+[42]	validation_0-mlogloss:0.14346	validation_1-mlogloss:0.24312
+[43]	validation_0-mlogloss:0.13878	validation_1-mlogloss:0.23907
+[44]	validation_0-mlogloss:0.13426	validation_1-mlogloss:0.23516
+[45]	validation_0-mlogloss:0.12986	validation_1-mlogloss:0.23170
+[46]	validation_0-mlogloss:0.12586	validation_1-mlogloss:0.22817
+[47]	validation_0-mlogloss:0.12166	validation_1-mlogloss:0.22515
+[48]	validation_0-mlogloss:0.11829	validation_1-mlogloss:0.22190
+[49]	validation_0-mlogloss:0.11439	validation_1-mlogloss:0.21839
+
+[SUCCESS] Model trained successfully!
+[INFO] Best iteration: 49
+[INFO] Total iterations completed: 50
+[INFO] Training completed all 50 iterations
+
+================================================================================
+MODEL EVALUATION
+================================================================================
+
+TRAINING METRICS:
+  Accuracy:  99.16%
+  Precision: 0.9917
+  Recall:    0.9916
+  F1-Score:  0.9916
+
+TEST METRICS:
+  Accuracy:  93.95%
+  Precision: 0.9400
+  Recall:    0.9395
+  F1-Score:  0.9396
+
+OVERFITTING ANALYSIS:
+  Gap: 5.21% (Good - Minimal overfitting)
+
+--------------------------------------------------------------------------------
+DETAILED CLASSIFICATION REPORT
+--------------------------------------------------------------------------------
+              precision    recall  f1-score   support
+
+    immature     0.9485    0.9388    0.9436       490
+      mature     0.9600    0.9402    0.9500       485
+ semi_mature     0.9077    0.9394    0.9233       429
+
+    accuracy                         0.9395      1404
+   macro avg     0.9387    0.9395    0.9389      1404
+weighted avg     0.9400    0.9395    0.9396      1404
+
+
+--------------------------------------------------------------------------------
+SAVING RESULTS
+--------------------------------------------------------------------------------
+[OK] Models saved: xgb_model.pkl, scaler.pkl
+[OK] Results saved: results.json, classification_report.txt
+
+Generating visualizations...
+[OK] Saved: confusion_matrix.png
+[OK] Saved: training_loss.png
+[OK] Saved: performance_metrics.png
+[OK] Saved: feature_importance.png
+[OK] Saved: overfitting_analysis.png
+[OK] Saved: class_distribution.png
+
+================================================================================
+RESULTS SAVED SUCCESSFULLY!
+================================================================================
+
+All results saved in 'Digital_Maturity_XGBoost_Results/' directory:
+  [OK] xgb_model.pkl (trained model)
+  [OK] scaler.pkl (feature scaler)
+  [OK] results.json (all metrics)
+  [OK] classification_report.txt
+  [OK] confusion_matrix.png
+  [OK] training_loss.png
+  [OK] performance_metrics.png
+  [OK] feature_importance.png
+  [OK] overfitting_analysis.png
+  [OK] class_distribution.png
+
+You can view these files anytime without re-running the code!
+
+================================================================================
+KEY RESULTS SUMMARY
+================================================================================
+Model: XGBoost
+Image Type: Digital
+Task: Maturity Classification
+Classes: immature, mature, semi_mature
+
+Test Accuracy: 93.95%
+Test F1-Score: 0.9396
+Overfitting Gap: 5.21%
+Best Iteration: 49/50
+================================================================================
+
+[OK] Memory cleaned up
+
+================================================================================
+SCRIPT COMPLETED SUCCESSFULLY
+================================================================================
+
+
+[Done] exited with code=0 in 2334.419 seconds
+

@@ -1,0 +1,37 @@
+{
+    "model": "Convolutional Neural Network (CNN)",
+    "image_type": "Thermal",
+    "task": "Maturity Classification",
+    "timestamp": "2025-10-13 15:47:05",
+    "classes": [
+        "anthracose",
+        "fruit_fly",
+        "healthy_guava"
+    ],
+    "architecture": {
+        "total_params": 9700387,
+        "trainable_params": 9696931,
+        "layers": 32,
+        "epochs_trained": 11,
+        "batch_size": 32,
+        "image_size": [
+            128,
+            128
+        ]
+    },
+    "training_metrics": {
+        "final_accuracy": 0.9691526293754578,
+        "final_loss": 0.08731335401535034,
+        "best_val_accuracy": 0.9618967175483704,
+        "best_val_loss": 0.09291967749595642
+    },
+    "test_metrics": {
+        "accuracy": 0.9746192693710327,
+        "precision": 0.9747822532991023,
+        "recall": 0.9746192893401016,
+        "f1_score": 0.974649318595588,
+        "loss": 0.0739026591181755
+    },
+    "overfitting_gap_percent": -0.5466639995574951,
+    "classification_report": "               precision    recall  f1-score   support\n\n   anthracose     0.9562    0.9712    0.9636       382\n    fruit_fly     0.9863    0.9686    0.9774       446\nhealthy_guava     0.9803    0.9859    0.9831       354\n\n     accuracy                         0.9746      1182\n    macro avg     0.9743    0.9752    0.9747      1182\n weighted avg     0.9748    0.9746    0.9746      1182\n"
+}

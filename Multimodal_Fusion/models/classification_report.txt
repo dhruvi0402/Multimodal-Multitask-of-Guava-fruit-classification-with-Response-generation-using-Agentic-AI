@@ -1,0 +1,11 @@
+Classification Report
+============================================================
+              precision    recall  f1-score   support
+
+    immature     0.9567    0.9508    0.9538       488
+      mature     0.9470    0.9627    0.9548       483
+ semi_mature     0.9519    0.9400    0.9459       400
+
+    accuracy                         0.9519      1371
+   macro avg     0.9519    0.9512    0.9515      1371
+weighted avg     0.9519    0.9519    0.9518      1371

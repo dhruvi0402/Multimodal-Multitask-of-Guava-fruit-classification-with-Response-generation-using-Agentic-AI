@@ -1,0 +1,18 @@
+KNN DIGITAL MATURITY CLASSIFICATION REPORT
+================================================================================
+
+Classes: immature, mature, semi_mature
+Optimal K value: 15
+Training Accuracy: 100.00%
+Test Accuracy: 51.28%
+Overfitting Gap: 48.72%
+
+              precision    recall  f1-score   support
+
+    immature     0.5312    0.6082    0.5671       490
+      mature     0.5873    0.4371    0.5012       485
+ semi_mature     0.4357    0.4895    0.4610       429
+
+    accuracy                         0.5128      1404
+   macro avg     0.5180    0.5116    0.5098      1404
+weighted avg     0.5214    0.5128    0.5119      1404

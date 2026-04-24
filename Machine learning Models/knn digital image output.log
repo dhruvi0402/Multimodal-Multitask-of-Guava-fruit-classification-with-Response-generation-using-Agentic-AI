@@ -1,0 +1,165 @@
+[Running] python -u "c:\Users\SATYABRATA MISHRA\Downloads\Final preprocessed data\knn digital image code.py"
+================================================================================
+K-NEAREST NEIGHBORS - DIGITAL IMAGE MATURITY CLASSIFICATION
+================================================================================
+Task: Classify guava maturity (immature, mature, semi_mature)
+Image Type: Digital
+Model: K-Nearest Neighbors (KNN)
+================================================================================
+
+--------------------------------------------------------------------------------
+LOADING DIGITAL MATURITY DATASET
+--------------------------------------------------------------------------------
+
+Loading Training data:
+  immature       : 2280 images -> 2280 loaded
+  mature         : 2257 images -> 2257 loaded
+  semi_mature    : 1994 images -> 1994 loaded
+
+Loading Validation data:
+  immature       :  488 images ->  488 loaded
+  mature         :  483 images ->  483 loaded
+  semi_mature    :  427 images ->  427 loaded
+
+Loading Test data:
+  immature       :  490 images ->  490 loaded
+  mature         :  485 images ->  485 loaded
+  semi_mature    :  429 images ->  429 loaded
+
+================================================================================
+DATASET SUMMARY
+================================================================================
+Classes detected: ['immature', 'mature', 'semi_mature']
+Number of classes: 3
+Training samples: 7929
+Test samples: 1404
+Feature dimension: 8310
+================================================================================
+
+Scaling features (CRITICAL for KNN distance calculations)...
+[OK] Features scaled using StandardScaler
+
+================================================================================
+FINDING OPTIMAL K VALUE
+================================================================================
+
+Testing K values: [3, 5, 7, 9, 11, 13, 15]
+Using 3-fold cross-validation on training set...
+--------------------------------------------------------------------------------
+K= 3: CV Accuracy = 48.83% (+/- 0.43%)
+K= 5: CV Accuracy = 49.77% (+/- 0.46%)
+K= 7: CV Accuracy = 50.41% (+/- 0.55%)
+K= 9: CV Accuracy = 50.57% (+/- 0.29%)
+K=11: CV Accuracy = 50.51% (+/- 0.86%)
+K=13: CV Accuracy = 50.75% (+/- 0.44%)
+K=15: CV Accuracy = 50.79% (+/- 0.09%)
+
+[INFO] Optimal K value: 15
+[INFO] Best CV Accuracy: 50.79%
+
+================================================================================
+TRAINING KNN MODEL
+================================================================================
+
+Model Configuration:
+  - K (number of neighbors): 15
+  - Distance weighting: Enabled (closer neighbors have more influence)
+  - Distance metric: Euclidean
+  - Algorithm: Auto (selects best for dataset)
+
+Starting training...
+
+[SUCCESS] Model trained successfully!
+
+================================================================================
+MODEL EVALUATION
+================================================================================
+
+TRAINING METRICS:
+  Accuracy:  100.00%
+  Precision: 1.0000
+  Recall:    1.0000
+  F1-Score:  1.0000
+
+TEST METRICS:
+  Accuracy:  51.28%
+  Precision: 0.5214
+  Recall:    0.5128
+  F1-Score:  0.5119
+
+OVERFITTING ANALYSIS:
+  Gap: 48.72% (Severe overfitting - Model memorizing data)
+
+--------------------------------------------------------------------------------
+DETAILED CLASSIFICATION REPORT
+--------------------------------------------------------------------------------
+              precision    recall  f1-score   support
+
+    immature     0.5312    0.6082    0.5671       490
+      mature     0.5873    0.4371    0.5012       485
+ semi_mature     0.4357    0.4895    0.4610       429
+
+    accuracy                         0.5128      1404
+   macro avg     0.5180    0.5116    0.5098      1404
+weighted avg     0.5214    0.5128    0.5119      1404
+
+
+--------------------------------------------------------------------------------
+SAVING RESULTS
+--------------------------------------------------------------------------------
+[OK] Model saved: knn_model.pkl
+[OK] Scaler saved: scaler.pkl
+[OK] Results saved: results.json, classification_report.txt
+
+Generating visualizations...
+[OK] Saved: confusion_matrix.png
+[OK] Saved: performance_metrics.png
+[OK] Saved: overfitting_analysis.png
+[OK] Saved: k_value_cv_analysis.png
+
+Testing all K values on test set for comparison...
+[OK] Saved: k_value_comparison.png
+[OK] Saved: class_distribution.png
+
+================================================================================
+RESULTS SAVED SUCCESSFULLY!
+================================================================================
+
+All results saved in 'Digital_Maturity_KNN_Results/' directory:
+  [OK] knn_model.pkl (trained model)
+  [OK] scaler.pkl (feature scaler)
+  [OK] results.json (all metrics)
+  [OK] classification_report.txt
+  [OK] confusion_matrix.png
+  [OK] performance_metrics.png
+  [OK] overfitting_analysis.png
+  [OK] k_value_cv_analysis.png
+  [OK] k_value_comparison.png
+  [OK] class_distribution.png
+
+You can view these files anytime without re-running the code!
+
+================================================================================
+KEY RESULTS SUMMARY
+================================================================================
+Model: K-Nearest Neighbors (KNN)
+Image Type: Digital
+Task: Maturity Classification
+Classes: immature, mature, semi_mature
+
+Optimal K Value: 15
+Test Accuracy: 51.28%
+Test F1-Score: 0.5119
+Overfitting Gap: 48.72%
+Best CV Accuracy: 50.79%
+================================================================================
+
+[OK] Memory cleaned up
+
+================================================================================
+SCRIPT COMPLETED SUCCESSFULLY
+================================================================================
+
+
+[Done] exited with code=0 in 1115.378 seconds
+

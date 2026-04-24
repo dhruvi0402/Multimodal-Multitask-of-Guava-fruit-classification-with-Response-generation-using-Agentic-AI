@@ -1,0 +1,526 @@
+[Running] python -u "c:\Users\SATYABRATA MISHRA\Downloads\Final preprocessed data\tempCodeRunnerFile.python"
+Traceback (most recent call last):
+  File "c:\Users\SATYABRATA MISHRA\Downloads\Final preprocessed data\tempCodeRunnerFile.python", line 3, in <module>
+    import numpy as np
+  File "C:\Users\SATYABRATA MISHRA\AppData\Local\Programs\Python\Python312\Lib\site-packages\numpy\__init__.py", line 171, in <module>
+    from . import random
+  File "C:\Users\SATYABRATA MISHRA\AppData\Local\Programs\Python\Python312\Lib\site-packages\numpy\random\__init__.py", line 180, in <module>
+    from . import _pickle
+  File "C:\Users\SATYABRATA MISHRA\AppData\Local\Programs\Python\Python312\Lib\site-packages\numpy\random\_pickle.py", line 1, in <module>
+    from .mtrand import RandomState
+  File "numpy\\random\\mtrand.pyx", line 1, in init numpy.random.mtrand
+  File "bit_generator.pyx", line 40, in init numpy.random.bit_generator
+  File "C:\Users\SATYABRATA MISHRA\AppData\Local\Programs\Python\Python312\Lib\secrets.py", line 18, in <module>
+    from random import SystemRandom
+  File "c:\Users\SATYABRATA MISHRA\Downloads\Final preprocessed data\random.py", line 4, in <module>
+    import matplotlib.pyplot as plt
+  File "C:\Users\SATYABRATA MISHRA\AppData\Local\Programs\Python\Python312\Lib\site-packages\matplotlib\__init__.py", line 153, in <module>
+    import tempfile
+  File "C:\Users\SATYABRATA MISHRA\AppData\Local\Programs\Python\Python312\Lib\tempfile.py", line 45, in <module>
+    from random import Random as _Random
+ImportError: cannot import name 'Random' from partially initialized module 'random' (most likely due to a circular import) (c:\Users\SATYABRATA MISHRA\Downloads\Final preprocessed data\random.py)
+
+[Done] exited with code=1 in 1.57 seconds
+
+[Running] python -u "c:\Users\SATYABRATA MISHRA\Downloads\Final preprocessed data\tempCodeRunnerFile.python"
+Traceback (most recent call last):
+  File "c:\Users\SATYABRATA MISHRA\Downloads\Final preprocessed data\tempCodeRunnerFile.python", line 3, in <module>
+    import numpy as np
+  File "C:\Users\SATYABRATA MISHRA\AppData\Local\Programs\Python\Python312\Lib\site-packages\numpy\__init__.py", line 171, in <module>
+    from . import random
+  File "C:\Users\SATYABRATA MISHRA\AppData\Local\Programs\Python\Python312\Lib\site-packages\numpy\random\__init__.py", line 180, in <module>
+    from . import _pickle
+  File "C:\Users\SATYABRATA MISHRA\AppData\Local\Programs\Python\Python312\Lib\site-packages\numpy\random\_pickle.py", line 1, in <module>
+    from .mtrand import RandomState
+  File "numpy\\random\\mtrand.pyx", line 1, in init numpy.random.mtrand
+  File "bit_generator.pyx", line 40, in init numpy.random.bit_generator
+  File "C:\Users\SATYABRATA MISHRA\AppData\Local\Programs\Python\Python312\Lib\secrets.py", line 18, in <module>
+    from random import SystemRandom
+  File "c:\Users\SATYABRATA MISHRA\Downloads\Final preprocessed data\random.py", line 4, in <module>
+    import matplotlib.pyplot as plt
+  File "C:\Users\SATYABRATA MISHRA\AppData\Local\Programs\Python\Python312\Lib\site-packages\matplotlib\__init__.py", line 153, in <module>
+    import tempfile
+  File "C:\Users\SATYABRATA MISHRA\AppData\Local\Programs\Python\Python312\Lib\tempfile.py", line 45, in <module>
+    from random import Random as _Random
+ImportError: cannot import name 'Random' from partially initialized module 'random' (most likely due to a circular import) (c:\Users\SATYABRATA MISHRA\Downloads\Final preprocessed data\random.py)
+
+[Done] exited with code=1 in 0.438 seconds
+
+[Running] python -u "c:\Users\SATYABRATA MISHRA\Downloads\Final preprocessed data\tempCodeRunnerFile.python"
+============================================================
+K-NEAREST NEIGHBORS IMAGE CLASSIFICATION - GUAVA DISEASE DETECTION
+============================================================
+
+Loading Training data...
+  anthracose: 1779 images
+  fruit_fly: 2081 images
+  healthy_guava: 1651 images
+
+Loading Validation data...
+  anthracose: 381 images
+  fruit_fly: 446 images
+  healthy_guava: 354 images
+
+Loading Test data...
+  anthracose: 382 images
+  fruit_fly: 446 images
+  healthy_guava: 354 images
+
+Dataset Summary:
+  Training samples: 6692
+  Test samples: 1182
+  Classes: ['anthracose', 'fruit_fly', 'healthy_guava']
+  Feature dimension: 8196
+
+Scaling features...
+
+Finding optimal K value...
+Fitting 3 folds for each of 24 candidates, totalling 72 fits
+
+Best Parameters: {'metric': 'manhattan', 'n_neighbors': 15, 'weights': 'distance'}
+Best Cross-Validation Accuracy: 0.6248
+
+Training final KNN model with best parameters...
+
+============================================================
+MODEL EVALUATION
+============================================================
+[CV] END ..metric=euclidean, n_neighbors=3, weights=distance; total time=  11.5s
+[CV] END ..metric=euclidean, n_neighbors=5, weights=distance; total time=  55.0s
+[CV] END ..metric=euclidean, n_neighbors=7, weights=distance; total time=   9.2s
+[CV] END ..metric=euclidean, n_neighbors=11, weights=uniform; total time=   9.3s
+[CV] END .metric=euclidean, n_neighbors=15, weights=distance; total time=  31.5s
+[CV] END ..metric=manhattan, n_neighbors=3, weights=distance; total time= 4.5min
+[CV] END ...metric=manhattan, n_neighbors=7, weights=uniform; total time= 3.4min
+[CV] END ...metric=manhattan, n_neighbors=9, weights=uniform; total time= 3.2min
+[CV] END .metric=manhattan, n_neighbors=11, weights=distance; total time= 3.5min
+[CV] END ...metric=euclidean, n_neighbors=5, weights=uniform; total time=  11.0s
+[CV] END ..metric=euclidean, n_neighbors=5, weights=distance; total time=  54.7s
+[CV] END ..metric=euclidean, n_neighbors=7, weights=distance; total time=   9.2s
+[CV] END ..metric=euclidean, n_neighbors=11, weights=uniform; total time=   9.6s
+[CV] END ..metric=euclidean, n_neighbors=15, weights=uniform; total time=  32.2s
+[CV] END ..metric=manhattan, n_neighbors=3, weights=distance; total time= 4.5min
+[CV] END ...metric=manhattan, n_neighbors=7, weights=uniform; total time= 3.4min
+[CV] END ..metric=manhattan, n_neighbors=9, weights=distance; total time= 3.1min
+[CV] END .metric=manhattan, n_neighbors=11, weights=distance; total time= 3.5min
+[CV] END ..metric=euclidean, n_neighbors=3, weights=distance; total time=  11.4s
+[CV] END ..metric=euclidean, n_neighbors=5, weights=distance; total time=  55.9s
+[CV] END ...metric=euclidean, n_neighbors=9, weights=uniform; total time=   9.4s
+[CV] END .metric=euclidean, n_neighbors=11, weights=distance; total time=   9.5s
+[CV] END .metric=euclidean, n_neighbors=15, weights=distance; total time=  33.5s
+[CV] END ...metric=manhattan, n_neighbors=5, weights=uniform; total time= 4.5min
+[CV] END ..metric=manhattan, n_neighbors=7, weights=distance; total time= 3.4min
+[CV] END ..metric=manhattan, n_neighbors=9, weights=distance; total time= 3.2min
+[CV] END ..metric=manhattan, n_neighbors=15, weights=uniform; total time= 3.5min
+[CV] END ..metric=euclidean, n_neighbors=3, weights=distance; total time=  11.2s
+[CV] END ...metric=euclidean, n_neighbors=5, weights=uniform; total time=  55.7s
+[CV] END ...metric=euclidean, n_neighbors=9, weights=uniform; total time=   9.6s
+[CV] END ..metric=euclidean, n_neighbors=11, weights=uniform; total time=   9.3s
+[CV] END .metric=euclidean, n_neighbors=15, weights=distance; total time=  33.4s
+[CV] END ...metric=manhattan, n_neighbors=5, weights=uniform; total time= 4.5min
+[CV] END ...metric=manhattan, n_neighbors=7, weights=uniform; total time= 3.4min
+[CV] END ..metric=manhattan, n_neighbors=9, weights=distance; total time= 3.2min
+[CV] END ..metric=manhattan, n_neighbors=15, weights=uniform; total time= 3.5min
+
+Training Accuracy: 100.00%
+Test Accuracy: 66.58%
+
+------------------------------------------------------------
+CLASSIFICATION REPORT
+------------------------------------------------------------
+               precision    recall  f1-score   support
+
+   anthracose       0.56      0.78      0.65       382
+    fruit_fly       0.78      0.51      0.62       446
+healthy_guava       0.74      0.73      0.74       354
+
+     accuracy                           0.67      1182
+    macro avg       0.69      0.68      0.67      1182
+ weighted avg       0.69      0.67      0.66      1182
+
+
+Saving results...
+
+Testing different K values for visualization...
+
+============================================================
+RESULTS SAVED SUCCESSFULLY!
+============================================================
+
+All results saved in 'KNN_Results/' directory:
+  - knn_model.pkl (trained model)
+  - scaler.pkl (feature scaler)
+  - results.json (all metrics)
+  - classification_report.txt
+  - confusion_matrix.png
+  - accuracy_comparison.png
+  - k_value_analysis.png
+
+You can view these files anytime without re-running the code!
+[CV] END ...metric=euclidean, n_neighbors=5, weights=uniform; total time=  11.5s
+[CV] END ...metric=euclidean, n_neighbors=7, weights=uniform; total time=  56.2s
+[CV] END ..metric=euclidean, n_neighbors=9, weights=distance; total time=   9.4s
+[CV] END ..metric=euclidean, n_neighbors=15, weights=uniform; total time=   9.2s
+[CV] END ...metric=manhattan, n_neighbors=3, weights=uniform; total time= 4.9min
+[CV] END ...metric=manhattan, n_neighbors=5, weights=uniform; total time= 3.4min
+[CV] END ..metric=manhattan, n_neighbors=7, weights=distance; total time= 3.0min
+[CV] END ..metric=manhattan, n_neighbors=11, weights=uniform; total time= 3.5min
+[CV] END ..metric=manhattan, n_neighbors=15, weights=uniform; total time= 2.6min
+[CV] END ...metric=euclidean, n_neighbors=3, weights=uniform; total time=  11.6s
+[CV] END ...metric=euclidean, n_neighbors=7, weights=uniform; total time=  55.9s
+[CV] END ..metric=euclidean, n_neighbors=9, weights=distance; total time=   9.5s
+[CV] END .metric=euclidean, n_neighbors=11, weights=distance; total time=   9.4s
+[CV] END ...metric=manhattan, n_neighbors=3, weights=uniform; total time= 4.9min
+[CV] END ..metric=manhattan, n_neighbors=5, weights=distance; total time= 3.4min
+[CV] END ..metric=manhattan, n_neighbors=7, weights=distance; total time= 3.1min
+[CV] END ..metric=manhattan, n_neighbors=11, weights=uniform; total time= 3.5min
+[CV] END .metric=manhattan, n_neighbors=15, weights=distance; total time= 2.6min
+[CV] END ...metric=euclidean, n_neighbors=3, weights=uniform; total time=  11.7s
+[CV] END ..metric=euclidean, n_neighbors=7, weights=distance; total time=  55.5s
+[CV] END ...metric=euclidean, n_neighbors=9, weights=uniform; total time=   9.6s
+[CV] END .metric=euclidean, n_neighbors=11, weights=distance; total time=   9.5s
+[CV] END ...metric=manhattan, n_neighbors=3, weights=uniform; total time= 4.9min
+[CV] END ..metric=manhattan, n_neighbors=5, weights=distance; total time= 3.4min
+[CV] END ...metric=manhattan, n_neighbors=9, weights=uniform; total time= 3.1min
+[CV] END ..metric=manhattan, n_neighbors=11, weights=uniform; total time= 3.5min
+[CV] END .metric=manhattan, n_neighbors=15, weights=distance; total time= 2.6min
+[CV] END ...metric=euclidean, n_neighbors=3, weights=uniform; total time=  11.7s
+[CV] END ...metric=euclidean, n_neighbors=7, weights=uniform; total time=  56.2s
+[CV] END ..metric=euclidean, n_neighbors=9, weights=distance; total time=   9.3s
+[CV] END ..metric=euclidean, n_neighbors=15, weights=uniform; total time=   9.6s
+[CV] END ..metric=manhattan, n_neighbors=3, weights=distance; total time= 4.9min
+[CV] END ..metric=manhattan, n_neighbors=5, weights=distance; total time= 3.4min
+[CV] END ...metric=manhattan, n_neighbors=9, weights=uniform; total time= 3.1min
+[CV] END .metric=manhattan, n_neighbors=11, weights=distance; total time= 3.5min
+[CV] END .metric=manhattan, n_neighbors=15, weights=distance; total time= 2.6min
+
+[Done] exited with code=0 in 1473.289 seconds
+
+[Running] python -u "c:\Users\SATYABRATA MISHRA\Downloads\Final preprocessed data\tempCodeRunnerFile.python"
+======================================================================
+SVM IMAGE CLASSIFICATION - GUAVA DISEASE DETECTION
+======================================================================
+
+Checking dataset integrity...
+  Training: 5511 images
+  Validation: 1181 images
+  Test: 1182 images
+
+Data Leakage Check:
+  ✓ No overlap between TRAIN and VAL
+  ✓ No overlap between TRAIN and TEST
+  ✓ No overlap between VAL and TEST
+
+Loading Training data:
+  anthracose: 1779 images → 1779 loaded
+  fruit_fly: 2081 images → 2081 loaded
+  healthy_guava: 1651 images → 1651 loaded
+
+Loading Validation data:
+  anthracose: 381 images → 381 loaded
+  fruit_fly: 446 images → 446 loaded
+  healthy_guava: 354 images → 354 loaded
+
+Loading Test data:
+  anthracose: 382 images → 382 loaded
+  fruit_fly: 446 images → 446 loaded
+  healthy_guava: 354 images → 354 loaded
+
+======================================================================
+Dataset Summary:
+  Classes: ['anthracose', 'fruit_fly', 'healthy_guava']
+  Training samples: 6692
+  Test samples: 1182
+  Feature dimension: 8296
+======================================================================
+
+Scaling features...
+
+Training SVM model with regularization to prevent overfitting...
+Using C=1.0 (moderate regularization)
+[LibSVM]...*.*
+optimization finished, #iter = 4340
+obj = -952.991228, rho = -1.012373
+nSV = 2853, nBSV = 672
+Total nSV = 2853
+...*.*
+optimization finished, #iter = 4285
+obj = -942.516055, rho = -1.107890
+nSV = 2815, nBSV = 665
+Total nSV = 2815
+...*.*
+optimization finished, #iter = 4309
+obj = -933.240657, rho = -1.175917
+nSV = 2825, nBSV = 638
+Total nSV = 2825
+...*.*
+optimization finished, #iter = 4323
+obj = -945.670410, rho = -1.116764
+nSV = 2828, nBSV = 657
+Total nSV = 2828
+...*.*
+optimization finished, #iter = 4305
+obj = -961.817042, rho = -1.050288
+nSV = 2839, nBSV = 668
+Total nSV = 2839
+...*..*
+optimization finished, #iter = 5203
+obj = -1096.751838, rho = 1.075831
+nSV = 3355, nBSV = 741
+..*.*
+optimization finished, #iter = 3961
+obj = -709.254651, rho = -0.862667
+nSV = 2466, nBSV = 433
+Total nSV = 2466
+..*..*
+optimization finished, #iter = 4072
+obj = -701.677710, rho = -0.906326
+nSV = 2499, nBSV = 418
+Total nSV = 2499
+..*.*
+optimization finished, #iter = 3911
+obj = -707.685270, rho = -0.885450
+nSV = 2464, nBSV = 441
+Total nSV = 2464
+..*.*
+optimization finished, #iter = 3979
+obj = -712.441375, rho = -0.842365
+nSV = 2477, nBSV = 441
+Total nSV = 2477
+..*.*
+optimization finished, #iter = 3954
+obj = -702.273238, rho = -0.814807
+nSV = 2453, nBSV = 428
+Total nSV = 2453
+...*.*
+optimization finished, #iter = 4795
+obj = -816.113768, rho = 0.847728
+nSV = 2935, nBSV = 492
+...*.*
+optimization finished, #iter = 4840
+obj = -898.363555, rho = 0.172982
+nSV = 2984, nBSV = 526
+Total nSV = 2984
+...*.*
+optimization finished, #iter = 4791
+obj = -876.560238, rho = 0.122155
+nSV = 2945, nBSV = 512
+Total nSV = 2945
+...*.*
+optimization finished, #iter = 4819
+obj = -881.623116, rho = 0.167996
+nSV = 2955, nBSV = 523
+Total nSV = 2955
+...*.*
+optimization finished, #iter = 4790
+obj = -885.681263, rho = 0.160335
+nSV = 2949, nBSV = 523
+Total nSV = 2949
+...*.*
+optimization finished, #iter = 4788
+obj = -894.992436, rho = 0.160509
+nSV = 2949, nBSV = 543
+Total nSV = 2949
+....*.*
+optimization finished, #iter = 5840
+obj = -1029.693187, rho = -0.194585
+nSV = 3524, nBSV = 590
+Total nSV = 5684
+
+✓ Model trained successfully!
+
+======================================================================
+MODEL EVALUATION
+======================================================================
+
+TRAINING METRICS:
+  Accuracy:  98.54%
+  Precision: 0.9857
+  Recall:    0.9854
+  F1-Score:  0.9853
+
+TEST METRICS:
+  Accuracy:  91.29%
+  Precision: 0.9186
+  Recall:    0.9129
+  F1-Score:  0.9121
+
+OVERFITTING ANALYSIS:
+  Gap: 7.25% (✓ Good - Minimal overfitting)
+
+----------------------------------------------------------------------
+DETAILED CLASSIFICATION REPORT
+----------------------------------------------------------------------
+               precision    recall  f1-score   support
+
+   anthracose     0.9280    0.9110    0.9194       382
+    fruit_fly     0.8647    0.9888    0.9226       446
+healthy_guava     0.9764    0.8192    0.8909       354
+
+     accuracy                         0.9129      1182
+    macro avg     0.9230    0.9063    0.9110      1182
+ weighted avg     0.9186    0.9129    0.9121      1182
+
+
+Saving results...
+
+======================================================================
+RESULTS SAVED SUCCESSFULLY!
+======================================================================
+
+All results saved in 'SVM_Results/' directory:
+  ✓ svm_model.pkl (trained model)
+  ✓ scaler.pkl (feature scaler)
+  ✓ results.json (all metrics)
+  ✓ classification_report.txt
+  ✓ confusion_matrix.png
+  ✓ performance_metrics.png
+  ✓ overfitting_analysis.png
+
+You can view these files anytime without re-running the code!
+
+[Done] exited with code=0 in 1581.344 seconds
+
+[Running] python -u "c:\Users\SATYABRATA MISHRA\Downloads\Final preprocessed data\xb boost.py"
+======================================================================
+XGBOOST IMAGE CLASSIFICATION - GUAVA DISEASE DETECTION
+======================================================================
+
+Loading Training data:
+  anthracose: 1779 images → 1779 loaded
+  fruit_fly: 2081 images → 2081 loaded
+  healthy_guava: 1651 images → 1651 loaded
+
+Loading Validation data:
+  anthracose: 381 images → 381 loaded
+  fruit_fly: 446 images → 446 loaded
+  healthy_guava: 354 images → 354 loaded
+
+Loading Test data:
+  anthracose: 382 images → 382 loaded
+  fruit_fly: 446 images → 446 loaded
+  healthy_guava: 354 images → 354 loaded
+
+======================================================================
+Dataset Summary:
+  Classes: ['anthracose', 'fruit_fly', 'healthy_guava']
+  Training samples: 6692
+  Test samples: 1182
+  Feature dimension: 8296
+======================================================================
+
+Scaling features...
+
+Training XGBoost model with early stopping...
+Configuration:
+  - Max iterations: 50
+  - Early stopping patience: 3
+  - Regularization: alpha=0.1, lambda=1.0
+[0]	validation_0-mlogloss:0.97255	validation_1-mlogloss:0.97896
+[1]	validation_0-mlogloss:0.86635	validation_1-mlogloss:0.87694
+[2]	validation_0-mlogloss:0.77541	validation_1-mlogloss:0.79017
+[3]	validation_0-mlogloss:0.69956	validation_1-mlogloss:0.71825
+[4]	validation_0-mlogloss:0.63251	validation_1-mlogloss:0.65438
+[5]	validation_0-mlogloss:0.57191	validation_1-mlogloss:0.59691
+[6]	validation_0-mlogloss:0.51936	validation_1-mlogloss:0.54628
+[7]	validation_0-mlogloss:0.47241	validation_1-mlogloss:0.50100
+[8]	validation_0-mlogloss:0.43061	validation_1-mlogloss:0.46077
+[9]	validation_0-mlogloss:0.39376	validation_1-mlogloss:0.42617
+[10]	validation_0-mlogloss:0.36023	validation_1-mlogloss:0.39466
+[11]	validation_0-mlogloss:0.32991	validation_1-mlogloss:0.36642
+[12]	validation_0-mlogloss:0.30291	validation_1-mlogloss:0.33994
+[13]	validation_0-mlogloss:0.27800	validation_1-mlogloss:0.31609
+[14]	validation_0-mlogloss:0.25551	validation_1-mlogloss:0.29388
+[15]	validation_0-mlogloss:0.23581	validation_1-mlogloss:0.27430
+[16]	validation_0-mlogloss:0.21718	validation_1-mlogloss:0.25668
+[17]	validation_0-mlogloss:0.20070	validation_1-mlogloss:0.24144
+[18]	validation_0-mlogloss:0.18548	validation_1-mlogloss:0.22676
+[19]	validation_0-mlogloss:0.17114	validation_1-mlogloss:0.21259
+[20]	validation_0-mlogloss:0.15726	validation_1-mlogloss:0.19878
+[21]	validation_0-mlogloss:0.14548	validation_1-mlogloss:0.18704
+[22]	validation_0-mlogloss:0.13414	validation_1-mlogloss:0.17611
+[23]	validation_0-mlogloss:0.12416	validation_1-mlogloss:0.16629
+[24]	validation_0-mlogloss:0.11478	validation_1-mlogloss:0.15697
+[25]	validation_0-mlogloss:0.10637	validation_1-mlogloss:0.14893
+[26]	validation_0-mlogloss:0.09856	validation_1-mlogloss:0.14113
+[27]	validation_0-mlogloss:0.09133	validation_1-mlogloss:0.13367
+[28]	validation_0-mlogloss:0.08506	validation_1-mlogloss:0.12761
+[29]	validation_0-mlogloss:0.07910	validation_1-mlogloss:0.12178
+[30]	validation_0-mlogloss:0.07338	validation_1-mlogloss:0.11562
+[31]	validation_0-mlogloss:0.06836	validation_1-mlogloss:0.11067
+[32]	validation_0-mlogloss:0.06364	validation_1-mlogloss:0.10554
+[33]	validation_0-mlogloss:0.05919	validation_1-mlogloss:0.10101
+[34]	validation_0-mlogloss:0.05512	validation_1-mlogloss:0.09639
+[35]	validation_0-mlogloss:0.05142	validation_1-mlogloss:0.09249
+[36]	validation_0-mlogloss:0.04803	validation_1-mlogloss:0.08905
+[37]	validation_0-mlogloss:0.04507	validation_1-mlogloss:0.08600
+[38]	validation_0-mlogloss:0.04226	validation_1-mlogloss:0.08336
+[39]	validation_0-mlogloss:0.03955	validation_1-mlogloss:0.08056
+[40]	validation_0-mlogloss:0.03720	validation_1-mlogloss:0.07790
+[41]	validation_0-mlogloss:0.03490	validation_1-mlogloss:0.07548
+[42]	validation_0-mlogloss:0.03281	validation_1-mlogloss:0.07332
+[43]	validation_0-mlogloss:0.03094	validation_1-mlogloss:0.07165
+[44]	validation_0-mlogloss:0.02922	validation_1-mlogloss:0.06967
+[45]	validation_0-mlogloss:0.02750	validation_1-mlogloss:0.06769
+[46]	validation_0-mlogloss:0.02596	validation_1-mlogloss:0.06595
+[47]	validation_0-mlogloss:0.02453	validation_1-mlogloss:0.06441
+[48]	validation_0-mlogloss:0.02328	validation_1-mlogloss:0.06296
+[49]	validation_0-mlogloss:0.02213	validation_1-mlogloss:0.06201
+
+✓ Model trained successfully!
+✓ Best iteration: 49
+✓ Stopped at iteration: 52
+
+======================================================================
+MODEL EVALUATION
+======================================================================
+
+TRAINING METRICS:
+  Accuracy:  99.94%
+  Precision: 0.9994
+  Recall:    0.9994
+  F1-Score:  0.9994
+
+TEST METRICS:
+  Accuracy:  98.56%
+  Precision: 0.9858
+  Recall:    0.9856
+  F1-Score:  0.9856
+
+OVERFITTING ANALYSIS:
+  Gap: 1.38% (✓ Excellent - No overfitting)
+
+----------------------------------------------------------------------
+DETAILED CLASSIFICATION REPORT
+----------------------------------------------------------------------
+               precision    recall  f1-score   support
+
+   anthracose     0.9819    0.9948    0.9883       382
+    fruit_fly     0.9801    0.9955    0.9878       446
+healthy_guava     0.9971    0.9633    0.9799       354
+
+     accuracy                         0.9856      1182
+    macro avg     0.9864    0.9845    0.9853      1182
+ weighted avg     0.9858    0.9856    0.9856      1182
+
+
+Saving results...
+
+======================================================================
+RESULTS SAVED SUCCESSFULLY!
+======================================================================
+
+All results saved in 'XGBoost_Results/' directory:
+  ✓ xgb_model.pkl (trained model)
+  ✓ scaler.pkl (feature scaler)
+  ✓ results.json (all metrics)
+  ✓ classification_report.txt
+  ✓ confusion_matrix.png
+  ✓ training_loss.png
+  ✓ performance_analysis.png
+  ✓ overfitting_analysis.png
+
+You can view these files anytime without re-running the code!
+
+[Done] exited with code=0 in 1103.607 seconds
+

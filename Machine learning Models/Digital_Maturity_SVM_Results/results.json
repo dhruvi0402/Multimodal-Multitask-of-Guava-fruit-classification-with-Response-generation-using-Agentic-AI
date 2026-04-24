@@ -1,0 +1,45 @@
+{
+    "model": "Support Vector Machine (SVM)",
+    "image_type": "Digital",
+    "task": "Maturity Classification",
+    "timestamp": "2025-10-11 23:14:07",
+    "classes": [
+        "immature",
+        "mature",
+        "semi_mature"
+    ],
+    "parameters": {
+        "C": 1.0,
+        "gamma": "scale",
+        "kernel": "rbf",
+        "class_weight": "balanced",
+        "image_size": [
+            128,
+            128
+        ]
+    },
+    "model_info": {
+        "n_support_vectors": [
+            2236,
+            2608,
+            2391
+        ],
+        "total_support_vectors": 7235,
+        "support_vector_ratio": 91.2473199646866,
+        "feature_dimension": 8310
+    },
+    "training_metrics": {
+        "accuracy": 0.9766679278597553,
+        "precision": 0.976927777793833,
+        "recall": 0.9766679278597553,
+        "f1_score": 0.9766984627151019
+    },
+    "test_metrics": {
+        "accuracy": 0.7670940170940171,
+        "precision": 0.7729656769550387,
+        "recall": 0.7670940170940171,
+        "f1_score": 0.7686375139072192
+    },
+    "overfitting_gap_percent": 20.957391076573817,
+    "classification_report": "              precision    recall  f1-score   support\n\n    immature     0.8600    0.7898    0.8234       490\n      mature     0.7638    0.7402    0.7518       485\n semi_mature     0.6839    0.7716    0.7251       429\n\n    accuracy                         0.7671      1404\n   macro avg     0.7692    0.7672    0.7668      1404\nweighted avg     0.7730    0.7671    0.7686      1404\n"
+}

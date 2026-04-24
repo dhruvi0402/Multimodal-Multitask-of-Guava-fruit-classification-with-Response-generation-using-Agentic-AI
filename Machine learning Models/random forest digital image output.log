@@ -1,0 +1,253 @@
+[Running] python -u "c:\Users\SATYABRATA MISHRA\Downloads\Final preprocessed data\random forest digital image code.py"
+================================================================================
+RANDOM FOREST - DIGITAL IMAGE MATURITY CLASSIFICATION
+================================================================================
+Task: Classify guava maturity (immature, mature, semi_mature)
+Image Type: Digital
+Model: Random Forest Classifier
+================================================================================
+
+--------------------------------------------------------------------------------
+LOADING DIGITAL MATURITY DATASET
+--------------------------------------------------------------------------------
+
+Loading Training data:
+  immature       : 2280 images -> 2280 loaded
+  mature         : 2257 images -> 2257 loaded
+  semi_mature    : 1994 images -> 1994 loaded
+
+Loading Validation data:
+  immature       :  488 images ->  488 loaded
+  mature         :  483 images ->  483 loaded
+  semi_mature    :  427 images ->  427 loaded
+
+Loading Test data:
+  immature       :  490 images ->  490 loaded
+  mature         :  485 images ->  485 loaded
+  semi_mature    :  429 images ->  429 loaded
+
+================================================================================
+DATASET SUMMARY
+================================================================================
+Classes detected: ['immature', 'mature', 'semi_mature']
+Number of classes: 3
+Training samples: 7929
+Test samples: 1404
+Feature dimension: 8310
+================================================================================
+
+================================================================================
+TRAINING RANDOM FOREST MODEL
+================================================================================
+
+Model Configuration:
+  - Number of trees (n_estimators): 100
+  - Max tree depth: 15 (prevents overfitting)
+  - Min samples to split: 10
+  - Min samples per leaf: 4
+  - Max features per split: sqrt
+  - Bootstrap sampling: Enabled
+  - Class weights: Balanced
+
+Starting training...
+
+[Parallel(n_jobs=-1)]: Using backend ThreadingBackend with 8 concurrent workers.
+building tree 1 of 100building tree 2 of 100
+building tree 3 of 100
+building tree 4 of 100
+building tree 5 of 100
+
+building tree 6 of 100building tree 7 of 100
+
+building tree 8 of 100
+building tree 9 of 100
+building tree 10 of 100
+building tree 11 of 100
+building tree 12 of 100
+building tree 13 of 100
+building tree 14 of 100
+building tree 15 of 100
+building tree 16 of 100
+building tree 17 of 100
+building tree 18 of 100
+building tree 19 of 100
+building tree 20 of 100
+building tree 21 of 100
+building tree 22 of 100
+building tree 23 of 100
+building tree 24 of 100
+building tree 25 of 100
+building tree 26 of 100
+building tree 27 of 100
+building tree 28 of 100
+building tree 29 of 100
+building tree 30 of 100
+building tree 31 of 100
+building tree 32 of 100
+building tree 33 of 100
+[Parallel(n_jobs=-1)]: Done  25 tasks      | elapsed:    6.9s
+building tree 34 of 100
+building tree 35 of 100
+building tree 36 of 100
+building tree 37 of 100
+building tree 38 of 100
+building tree 39 of 100
+building tree 40 of 100
+building tree 41 of 100
+building tree 42 of 100
+building tree 43 of 100
+building tree 44 of 100
+building tree 45 of 100
+building tree 46 of 100
+building tree 47 of 100
+building tree 48 of 100
+building tree 49 of 100
+building tree 50 of 100
+building tree 51 of 100
+building tree 52 of 100
+building tree 53 of 100
+building tree 54 of 100
+building tree 55 of 100
+building tree 56 of 100
+building tree 57 of 100
+building tree 58 of 100
+building tree 59 of 100
+building tree 60 of 100
+building tree 61 of 100
+building tree 62 of 100
+building tree 63 of 100
+building tree 64 of 100
+building tree 65 of 100
+building tree 66 of 100
+building tree 67 of 100
+building tree 68 of 100
+building tree 69 of 100
+building tree 70 of 100
+building tree 71 of 100
+building tree 72 of 100
+building tree 73 of 100
+building tree 74 of 100
+building tree 75 of 100
+building tree 76 of 100
+building tree 77 of 100
+building tree 78 of 100
+building tree 79 of 100
+building tree 80 of 100
+building tree 81 of 100
+building tree 82 of 100
+building tree 83 of 100
+building tree 84 of 100
+building tree 85 of 100
+building tree 86 of 100
+building tree 87 of 100
+building tree 88 of 100
+building tree 89 of 100
+building tree 90 of 100
+building tree 91 of 100
+building tree 92 of 100
+building tree 93 of 100
+building tree 94 of 100
+building tree 95 of 100
+building tree 96 of 100
+building tree 97 of 100
+building tree 98 of 100
+building tree 99 of 100
+building tree 100 of 100
+[Parallel(n_jobs=-1)]: Done 100 out of 100 | elapsed:   28.3s finished
+
+[SUCCESS] Model trained successfully!
+
+================================================================================
+MODEL EVALUATION
+================================================================================
+[Parallel(n_jobs=8)]: Using backend ThreadingBackend with 8 concurrent workers.
+[Parallel(n_jobs=8)]: Done  25 tasks      | elapsed:    0.0s
+[Parallel(n_jobs=8)]: Done 100 out of 100 | elapsed:    0.0s finished
+[Parallel(n_jobs=8)]: Using backend ThreadingBackend with 8 concurrent workers.
+[Parallel(n_jobs=8)]: Done  25 tasks      | elapsed:    0.0s
+[Parallel(n_jobs=8)]: Done 100 out of 100 | elapsed:    0.0s finished
+
+TRAINING METRICS:
+  Accuracy:  99.36%
+  Precision: 0.9936
+  Recall:    0.9936
+  F1-Score:  0.9936
+
+TEST METRICS:
+  Accuracy:  84.97%
+  Precision: 0.8496
+  Recall:    0.8497
+  F1-Score:  0.8495
+
+OVERFITTING ANALYSIS:
+  Gap: 14.39% (Moderate overfitting)
+
+--------------------------------------------------------------------------------
+DETAILED CLASSIFICATION REPORT
+--------------------------------------------------------------------------------
+              precision    recall  f1-score   support
+
+    immature     0.8693    0.8959    0.8824       490
+      mature     0.8710    0.8495    0.8601       485
+ semi_mature     0.8028    0.7972    0.8000       429
+
+    accuracy                         0.8497      1404
+   macro avg     0.8477    0.8475    0.8475      1404
+weighted avg     0.8496    0.8497    0.8495      1404
+
+
+--------------------------------------------------------------------------------
+SAVING RESULTS
+--------------------------------------------------------------------------------
+[OK] Model saved: rf_model.pkl
+[OK] Results saved: results.json, classification_report.txt
+
+Generating visualizations...
+[OK] Saved: confusion_matrix.png
+[OK] Saved: performance_metrics.png
+[OK] Saved: overfitting_analysis.png
+[OK] Saved: feature_importance.png
+[OK] Saved: tree_depth_distribution.png
+[OK] Saved: class_distribution.png
+
+================================================================================
+RESULTS SAVED SUCCESSFULLY!
+================================================================================
+
+All results saved in 'Digital_Maturity_RandomForest_Results/' directory:
+  [OK] rf_model.pkl (trained model)
+  [OK] results.json (all metrics)
+  [OK] classification_report.txt
+  [OK] confusion_matrix.png
+  [OK] performance_metrics.png
+  [OK] overfitting_analysis.png
+  [OK] feature_importance.png
+  [OK] tree_depth_distribution.png
+  [OK] class_distribution.png
+
+You can view these files anytime without re-running the code!
+
+================================================================================
+KEY RESULTS SUMMARY
+================================================================================
+Model: Random Forest
+Image Type: Digital
+Task: Maturity Classification
+Classes: immature, mature, semi_mature
+
+Number of Trees: 100
+Test Accuracy: 84.97%
+Test F1-Score: 0.8495
+Overfitting Gap: 14.39%
+Mean Tree Depth: 15.0
+================================================================================
+
+[OK] Memory cleaned up
+
+================================================================================
+SCRIPT COMPLETED SUCCESSFULLY
+================================================================================
+
+
+[Done] exited with code=0 in 1374.3 seconds
+
